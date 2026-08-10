@@ -2,7 +2,7 @@
 
   <img src="public/icon.png" alt="Foddo Logo" width="96" height="96" style="border-radius: 24px;" />
 
-  # Foddo (ফদ্দো)
+  # Foddo
   ### The Smart, Local-First Grocery & Shopping List App Built for Speed & Privacy
 
   [![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
