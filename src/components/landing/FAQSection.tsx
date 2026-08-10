@@ -14,7 +14,7 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-20 sm:py-32 bg-surface/40 border-t border-border/70 relative overflow-hidden">
+    <section id="faq" className="pt-20 pb-10 sm:pt-28 sm:pb-12 bg-surface/40 border-t border-border/70 relative overflow-hidden">
       {/* Background Ambient Glow */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-120 w-160 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-3xl" />
 

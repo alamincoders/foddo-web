@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { EcosystemShowcase } from "@/components/landing/EcosystemShowcase";
 import { TTFVPipelineSection } from "@/components/landing/TTFVPipelineSection";
+import { SmartInputSection } from "@/components/landing/SmartInputSection";
 import { FeatureStickyJourney } from "@/components/landing/FeatureStickyJourney";
 import { FamilySyncSection } from "@/components/landing/FamilySyncSection";
 import { LocalPrivacyBento } from "@/components/landing/LocalPrivacyBento";
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroSection />
         <EcosystemShowcase />
         <TTFVPipelineSection />
+        <SmartInputSection />
         <FeatureStickyJourney />
         <FamilySyncSection />
         <LocalPrivacyBento />

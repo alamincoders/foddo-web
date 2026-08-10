@@ -50,19 +50,28 @@ Whether you are preparing a quick weekly grocery run, navigating crowded superma
 Traditional shopping apps force users through mandatory email verifications, password setups, and demographic questionnaires before letting them write a single item. Foddo gets out of your way immediately:
 - **Instant Launch**: Opens straight to your active list without splash screen delays.
 - **Smart Quick-Add**: Ergonomic input positioned in the bottom 40% thumb zone.
-- **Auto-Aisle Categorization**: Automatically classifies items into Dairy, Produce, Bakery, Spices, Meat, and Household categories as you type.
+- **Instant Unit & Quantity Parsing**: Automatically extracts quantities and units without manual dropdowns.
 - **Local Persistence**: Sub-millisecond write latency directly to your smartphone's storage.
 
 | Pipeline Step | Time Elapsed | Action |
 | :--- | :--- | :--- |
 | **01. Instant Launch** | `0.2s` | Opens directly to your active list — zero splash lag. |
 | **02. Quick Type** | `1.2s` | Type "Milk" with instant predictive suggestions. |
-| **03. Auto-Category** | `2.1s` | Automatic categorization into Dairy / Store Aisle. |
+| **03. Smart Parsing** | `2.1s` | Automatic extraction of item name, quantity, and unit. |
 | **04. Instant Save** | `< 3.0s` | Saved locally on-device. Ready for shopping. |
 
 ---
 
-### 🛒 2. Bazar Mode (In-Store Cognitive Ergonomics)
+### 🌐 2. Proprietary Multilingual Smart Parser (Zero-Click Extraction)
+No cumbersome dropdown menus for units or separate quantity dials. Foddo's on-device NLP parser allows users to write grocery items in natural human language across **English**, **বাংলা (Bengali script)**, and **Romanized Banglish**:
+- **Automatic Token Parsing**: Inputting *"2kg alu"*, *"দেড় লিটার খাঁটি দুধ"*, or *"১ ডজন ডিম"* instantly extracts the quantity (`2`, `1.5`, `12`), measurement unit (`kg`, `L`, `Dozen/হালি`), and clean item name.
+- **Fraction & Dialect Comprehension**: Understands colloquial fractions (`হাফ` / `0.5`, `দেড়` / `1.5`, `পোয়া` / `250g`) and localized units (`হালি`, `কেজি`, `প্যাকেট`, `বোতল`).
+- **Zero-Clutter Flat List Entry**: Saves directly to your clean, minimalist list without distracting category folders or aisle dividers.
+- **Sub-Millisecond On-Device Execution**: 100% private, sandboxed, and zero network dependency.
+
+---
+
+### 🛒 3. Bazar Mode (In-Store Cognitive Ergonomics)
 Designed specifically for shopping while walking through crowded supermarket aisles:
 - **Fitts's Law Optimization**: 48px+ touch targets positioned for effortless 1-handed thumb reach.
 - **Goal Gradient & Zeigarnik Effects**: Real-time visual progress indicators motivate list completion as items are checked off.
@@ -75,7 +84,7 @@ Designed specifically for shopping while walking through crowded supermarket ais
 
 ---
 
-### 🔒 3. Local-First Architecture & Total Data Sovereignty
+### 🔒 4. Local-First Architecture & Total Data Sovereignty
 - **100% On-Device SQLite Storage**: Your shopping lists, budgets, and grocery habits remain stored locally on your device.
 - **Zero Cloud Gate & Zero Tracking**: No mandatory account creation, email capture, or phone number requirements.
 - **Demographic Privacy**: Demographic inputs (gender, age bracket) are strictly optional and contextual for smart household recommendations—never a functional barrier.
@@ -83,7 +92,7 @@ Designed specifically for shopping while walking through crowded supermarket ais
 
 ---
 
-### 👨‍👩‍👧 4. Real-Time Household Family Sync
+### 👨‍👩‍👧 5. Real-Time Household Family Sync
 - **6-Digit Invite Code**: Link household grocery lists with family members in seconds without creating cloud accounts.
 - **Live In-Market Status**: Know when family members are at the market (e.g., *"Dad At Market"*, *"Sister At Home"*).
 - **Zero Duplicate Purchases**: Instant item check-offs with live member avatars eliminate accidental duplicate buys.
@@ -95,7 +104,7 @@ Designed specifically for shopping while walking through crowded supermarket ais
 
 ---
 
-### 📊 5. List Hierarchy & Spending Insights
+### 📊 6. List Hierarchy & Spending Insights
 - **Smart Categorization**: Segment lists into *Today's Bazar*, *Upcoming Groceries*, and *Overdue Essentials*.
 - **Live Spending Totals**: Automated monthly expenditure calculations with localized currency symbols (৳, $, €, etc.).
 - **Bilingual Support**: Native English and Bengali (বাংলা - **স্মার্ট বাজার লিস্ট**) support with instant locale switching.

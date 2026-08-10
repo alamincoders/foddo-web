@@ -136,7 +136,7 @@ export function TTFVSection() {
               02
             </div>
             <h3 className="font-bold text-foreground text-base">2. Type &quot;Milk&quot;</h3>
-            <p className="mt-2 text-xs text-muted-foreground">Smart quick-add input with auto category prediction.</p>
+            <p className="mt-2 text-xs text-muted-foreground">Smart quick-add input with instant unit & quantity parsing.</p>
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-6 text-center">

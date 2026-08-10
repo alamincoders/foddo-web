@@ -129,7 +129,7 @@ export function FeatureStickyJourney() {
                   <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
                       src="/images/lists.png"
-                      alt="Foddo - All Your Lists Always Organized with Smart Categories"
+                      alt="Foddo - All Your Lists Always Organized with Clean Simplicity"
                       fill
                       sizes="(max-width: 768px) 100vw, 400px"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
@@ -164,7 +164,7 @@ export function FeatureStickyJourney() {
                 <ul className="space-y-3 text-sm text-foreground pt-2">
                   <li className="flex items-center gap-3">
                     <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
-                    <span>Smart categorization into Today, Upcoming, and Overdue lists</span>
+                    <span>Clear list separation into Today, Upcoming, and Overdue lists</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />

@@ -12,12 +12,17 @@ export const FAQ_DATA = [
   {
     question: "Does Foddo work without an internet connection?",
     answer:
-      "Absolutely. Because Foddo stores all data directly on your device, all features—including instant list creation, smart category auto-sorting, and Bazar Mode—work 100% offline, even inside basement supermarkets with zero signal.",
+      "Absolutely. Because Foddo stores all data directly on your device, all features—including instant list creation, multilingual smart parsing, and Bazar Mode—work 100% offline, even inside basement supermarkets with zero signal.",
   },
   {
     question: "How does Family Sync work without a mandatory account?",
     answer:
       "You can link household grocery lists with family members using a simple 6-digit sync code. Once connected, items synchronize in real time without requiring email or password registrations.",
+  },
+  {
+    question: "How does the Multilingual Smart Input feature work?",
+    answer:
+      "Foddo features an on-device natural language parser that lets you type grocery items naturally in English, বাংলা, or Romanized Banglish (e.g., '2kg alu', 'দেড় লিটার দুধ'). It automatically extracts quantities, units, and item names into a clean, distraction-free list without extra dropdowns or clicks.",
   },
   {
     question: "What is Bazar Mode?",
@@ -50,6 +55,7 @@ export function JsonLd() {
     downloadUrl: "https://play.google.com/store",
     featureList: [
       "Sub-3-Second Time To First Value",
+      "Multilingual Smart Input Parser (English & বাংলা)",
       "100% Local On-Device Storage",
       "Bazar Mode In-Store Goal Gradient",
       "Real-Time Household Family Sync",

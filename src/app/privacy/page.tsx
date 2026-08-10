@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             At <strong>Foddo</strong>, we believe your personal shopping habits, grocery lists, and family budgets are your private business. Traditional applications send every keystroke to remote cloud servers to analyze shopping behavior. Foddo takes an entirely different approach: <strong>Local-First Architecture</strong>.
           </p>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            When you create shopping lists, add items, or organize aisles in Foddo, all data remains stored directly inside your device&apos;s local SQLite database. No account creation or email registration is required to use the app.
+            When you create shopping lists, add items, or manage your trips in Foddo, all data remains stored directly inside your device&apos;s local SQLite database. No account creation or email registration is required to use the app.
           </p>
         </section>
 

@@ -63,6 +63,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="#smart-input" className="text-muted-foreground hover:text-primary transition-colors">
+                  Smart Multilingual Parser
+                </Link>
+              </li>
+              <li>
                 <Link href="#bazar-mode" className="text-muted-foreground hover:text-primary transition-colors">
                   Bazar Mode & Goal Tracking
                 </Link>

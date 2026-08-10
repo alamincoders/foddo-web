@@ -15,7 +15,7 @@ export function FeatureGrid() {
             Everything You Need For <span className="text-primary">Stress-Free</span> Shopping
           </h2>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg leading-relaxed">
-            Foddo combines ergonomic 1-handed design, supermarket aisle auto-sorting, and goal gradient motivation to streamline every trip to the store.
+            Foddo combines ergonomic 1-handed design, natural language smart parsing, and goal gradient motivation to streamline every trip to the store.
           </p>
         </div>
 
@@ -94,18 +94,18 @@ export function FeatureGrid() {
             </div>
           </div>
 
-          {/* Feature 3: Smart Aisle Auto-Sorting */}
+          {/* Feature 3: Multilingual Smart Input */}
           <div className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
             <div>
               <div className="inline-flex items-center gap-2 rounded-xl bg-accent-muted px-3 py-1.5 text-xs font-bold text-accent mb-4">
                 <Layers className="h-4 w-4" />
-                <span>Smart Supermarket Auto-Sorting</span>
+                <span>Multilingual Smart Input</span>
               </div>
               <h3 className="text-2xl font-bold text-foreground">
-                Organized by Store Aisles
+                Clean, Single-List Speed
               </h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                Never backtrack through store aisles again. Foddo automatically categorizes items into Dairy, Produce, Bakery, and Meat sections as you type.
+                Type naturally in English, বাংলা, or Banglish. Quantities and measurement units are parsed instantly into a clean, distraction-free list.
               </p>
             </div>
 

@@ -77,7 +77,7 @@ export function LocalPrivacyBento() {
                   Everything You Need For Smarter Shopping
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  Quick Add, Store Aisle Auto-Sorting, Family Mode, Re-Shop, Spending History, Reminders, and Dark Mode designed for everyday simplicity.
+                  Quick Add, Multilingual Smart Parsing, Family Mode, Re-Shop, Spending History, Reminders, and Dark Mode designed for everyday simplicity.
                 </p>
               </div>
 
@@ -99,10 +99,10 @@ export function LocalPrivacyBento() {
         </div>
 
         {/* 4 Core Pillars Grid */}
-        <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <StaggerItem>
-            <div className="rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md transition-shadow">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4">
+        <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+          <StaggerItem className="h-full flex">
+            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4 shrink-0">
                 <HardDrive className="h-5 w-5" />
               </div>
               <h4 className="text-base font-bold text-foreground">100% On-Device Storage</h4>
@@ -112,9 +112,9 @@ export function LocalPrivacyBento() {
             </div>
           </StaggerItem>
 
-          <StaggerItem>
-            <div className="rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md transition-shadow">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4">
+          <StaggerItem className="h-full flex">
+            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4 shrink-0">
                 <UserX className="h-5 w-5" />
               </div>
               <h4 className="text-base font-bold text-foreground">Zero Account Gate</h4>
@@ -124,9 +124,9 @@ export function LocalPrivacyBento() {
             </div>
           </StaggerItem>
 
-          <StaggerItem>
-            <div className="rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md transition-shadow">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4">
+          <StaggerItem className="h-full flex">
+            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4 shrink-0">
                 <Lock className="h-5 w-5" />
               </div>
               <h4 className="text-base font-bold text-foreground">Contextual Demographics</h4>
@@ -136,9 +136,9 @@ export function LocalPrivacyBento() {
             </div>
           </StaggerItem>
 
-          <StaggerItem>
-            <div className="rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md transition-shadow">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4">
+          <StaggerItem className="h-full flex">
+            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4 shrink-0">
                 <DownloadCloud className="h-5 w-5" />
               </div>
               <h4 className="text-base font-bold text-foreground">JSON Export & Backup</h4>

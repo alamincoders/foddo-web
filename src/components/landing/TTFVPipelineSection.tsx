@@ -23,9 +23,9 @@ const PIPELINE_STEPS = [
   {
     step: "03",
     time: "2.1s",
-    title: "3. Auto-Category",
-    description: "Item automatically classified into Dairy / Store Aisle without manual tagging.",
-    icon: "🏷️",
+    title: "3. Smart Parsing",
+    description: "Item name, quantity, and unit extracted automatically without manual dropdowns.",
+    icon: "✨",
   },
   {
     step: "04",

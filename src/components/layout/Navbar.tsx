@@ -34,7 +34,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           <Link
             href="#features"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
@@ -46,6 +46,12 @@ export function Navbar() {
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
           >
             Instant Speed
+          </Link>
+          <Link
+            href="#smart-input"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary flex items-center gap-1"
+          >
+            <span>Smart Parser</span>
           </Link>
           <Link
             href="#bazar-mode"
@@ -123,6 +129,14 @@ export function Navbar() {
             >
               <Zap className="h-5 w-5 text-accent" />
               Instant Speed (TTFV)
+            </Link>
+            <Link
+              href="#smart-input"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-surface"
+            >
+              <Zap className="h-5 w-5 text-primary" />
+              Smart Parser (Multilingual)
             </Link>
             <Link
               href="#bazar-mode"
