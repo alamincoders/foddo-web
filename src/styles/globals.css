@@ -74,3 +74,19 @@
     scroll-behavior: smooth;
   }
 }
+
+@utility perspective-1000 {
+  perspective: 1000px;
+}
+
+@utility perspective-1200 {
+  perspective: 1200px;
+}
+
+@utility shadow-soft-xl {
+  box-shadow: 0 20px 40px -15px rgba(22, 51, 0, 0.08), 0 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+@utility shadow-soft-2xl {
+  box-shadow: 0 30px 60px -20px rgba(47, 125, 92, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+}

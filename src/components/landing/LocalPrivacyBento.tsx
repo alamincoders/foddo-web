@@ -1,0 +1,154 @@
+"use client";
+
+import Image from "next/image";
+import { ShieldCheck, HardDrive, UserX, Lock, DownloadCloud, Sparkles, Layers } from "lucide-react";
+import { Reveal, StaggerContainer, StaggerItem } from "./motion/Reveal";
+
+export function LocalPrivacyBento() {
+  return (
+    <section id="privacy" className="py-20 sm:py-32 bg-surface/40 border-y border-border/70 relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24">
+          <Reveal direction="down">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-muted px-4 py-1.5 text-xs font-bold text-primary shadow-xs mb-4">
+              <ShieldCheck className="h-3.5 w-3.5 fill-primary text-primary" />
+              <span>Local-First & Data Sovereignty</span>
+            </div>
+          </Reveal>
+
+          <Reveal direction="up" delay={0.1}>
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2]">
+              Your Grocery Lists Stay <br className="hidden sm:inline" />
+              <span className="text-primary mt-1 inline-block">100% Private & In Your Control</span>
+            </h2>
+          </Reveal>
+
+          <Reveal direction="up" delay={0.2}>
+            <p className="mt-5 text-base text-muted-foreground sm:text-lg leading-relaxed">
+              FODDO is architected from the ground up as a local-first application. We do not sell your grocery habits, lock your data behind central cloud walls, or force mandatory account creation.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* 2-Column Bento Showcase with Settings & Smart Breakdown */}
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10 mb-16">
+          {/* Card 1: Settings & Data Control */}
+          <Reveal direction="left" delay={0.2}>
+            <div className="rounded-3xl border border-black/8 dark:border-white/10 bg-card p-6 sm:p-8 shadow-soft-2xl h-full flex flex-col justify-between">
+              <div className="mb-6">
+                <div className="inline-flex items-center gap-2 rounded-xl bg-primary-muted px-3 py-1 text-xs font-bold text-primary mb-3">
+                  <HardDrive className="h-4 w-4" />
+                  <span>Device-Level Storage</span>
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">
+                  Your Data, Your Way, Always Safe
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  Export offline JSON backups to local storage, toggle haptic feedback, switch light/dark themes, and choose between English and Bangla anytime.
+                </p>
+              </div>
+
+              <div className="flex justify-center pt-2">
+                <div className="relative w-full max-w-[320px] sm:max-w-[360px] rounded-2xl overflow-hidden border border-border/70 shadow-md">
+                  <div className="relative aspect-[1024/1536] w-full bg-surface">
+                    <Image
+                      src="/images/settings.png"
+                      alt="FODDO App Settings - Local Backup, Theme, Language, Privacy"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 360px"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Card 2: Smart Shopping Breakdown */}
+          <Reveal direction="right" delay={0.2}>
+            <div className="rounded-3xl border border-black/8 dark:border-white/10 bg-card p-6 sm:p-8 shadow-soft-2xl h-full flex flex-col justify-between">
+              <div className="mb-6">
+                <div className="inline-flex items-center gap-2 rounded-xl bg-accent-muted px-3 py-1 text-xs font-bold text-accent mb-3">
+                  <Layers className="h-4 w-4" />
+                  <span>8 Core Features Hub</span>
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">
+                  Everything You Need For Smarter Shopping
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  Quick Add, Store Aisle Auto-Sorting, Family Mode, Re-Shop, Spending History, Reminders, and Dark Mode designed for everyday simplicity.
+                </p>
+              </div>
+
+              <div className="flex justify-center pt-2">
+                <div className="relative w-full max-w-[320px] sm:max-w-[360px] rounded-2xl overflow-hidden border border-border/70 shadow-md">
+                  <div className="relative aspect-[1024/1536] w-full bg-surface">
+                    <Image
+                      src="/images/smart-shopping-breakdown.png"
+                      alt="FODDO - Everything You Need For Smarter Shopping Feature Map"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 360px"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* 4 Core Pillars Grid */}
+        <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <StaggerItem>
+            <div className="rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md transition-shadow">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4">
+                <HardDrive className="h-5 w-5" />
+              </div>
+              <h4 className="text-base font-bold text-foreground">100% On-Device Storage</h4>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                All lists and prices are written directly to your phone with zero network delay and zero cloud tracking.
+              </p>
+            </div>
+          </StaggerItem>
+
+          <StaggerItem>
+            <div className="rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md transition-shadow">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4">
+                <UserX className="h-5 w-5" />
+              </div>
+              <h4 className="text-base font-bold text-foreground">Zero Account Gate</h4>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                No mandatory sign-in, email validation, or phone verification required to manage unlimited grocery lists.
+              </p>
+            </div>
+          </StaggerItem>
+
+          <StaggerItem>
+            <div className="rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md transition-shadow">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4">
+                <Lock className="h-5 w-5" />
+              </div>
+              <h4 className="text-base font-bold text-foreground">Contextual Demographics</h4>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                Demographic inputs (gender/age) are 100% optional—used strictly for tailored household product suggestions.
+              </p>
+            </div>
+          </StaggerItem>
+
+          <StaggerItem>
+            <div className="rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md transition-shadow">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4">
+                <DownloadCloud className="h-5 w-5" />
+              </div>
+              <h4 className="text-base font-bold text-foreground">JSON Export & Backup</h4>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                You own your data completely. Export, backup, or restore your entire shopping history anytime with 1 tap.
+              </p>
+            </div>
+          </StaggerItem>
+        </StaggerContainer>
+      </div>
+    </section>
+  );
+}

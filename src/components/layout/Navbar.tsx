@@ -60,6 +60,12 @@ export function Navbar() {
             Privacy
           </Link>
           <Link
+            href="#faq"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+          >
+            FAQ
+          </Link>
+          <Link
             href="/privacy"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
           >
@@ -133,6 +139,14 @@ export function Navbar() {
             >
               <ShieldCheck className="h-5 w-5 text-primary" />
               Local Privacy
+            </Link>
+            <Link
+              href="#faq"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-surface"
+            >
+              <ShieldCheck className="h-5 w-5 text-accent" />
+              FAQ
             </Link>
             <Link
               href="/privacy"

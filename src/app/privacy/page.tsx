@@ -3,9 +3,19 @@ import { LegalDocLayout, LegalSection } from "@/components/legal/LegalDocLayout"
 import { ShieldCheck, HardDrive, Lock, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | FODDO",
+  title: "Privacy Policy | FODDO Local-First Smart Grocery List",
   description:
     "FODDO Privacy Policy detailing local-first data persistence, zero mandatory sign-in, optional demographic policy, and data sovereignty guarantees.",
+  alternates: {
+    canonical: "https://foddo.itechills.com/privacy",
+  },
+  openGraph: {
+    title: "Privacy Policy | FODDO Local-First Smart Grocery List",
+    description:
+      "Understand FODDO's local-first privacy guarantees: 100% on-device storage, zero mandatory sign-in, and zero tracking.",
+    url: "https://foddo.itechills.com/privacy",
+    siteName: "FODDO by iTechills",
+  },
 };
 
 const sections: LegalSection[] = [
@@ -134,7 +144,9 @@ export default function PrivacyPage() {
           </p>
           <div className="mt-2 inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-4 py-2.5 text-sm font-semibold text-foreground">
             <Mail className="h-4 w-4 text-primary" />
-            <span>support@foddo.app</span>
+            <a href="mailto:hello@itechills.com" className="hover:text-primary transition-colors">
+              hello@itechills.com
+            </a>
           </div>
         </section>
       </div>

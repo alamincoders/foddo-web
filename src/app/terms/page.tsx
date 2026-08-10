@@ -3,9 +3,19 @@ import { LegalDocLayout, LegalSection } from "@/components/legal/LegalDocLayout"
 import { FileText, ShieldAlert, Mail, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | FODDO",
+  title: "Terms of Service | FODDO Local-First Smart Grocery List",
   description:
     "FODDO Terms of Service outlining licensing terms, offline operation responsibilities, local data ownership, and user agreements.",
+  alternates: {
+    canonical: "https://foddo.itechills.com/terms",
+  },
+  openGraph: {
+    title: "Terms of Service | FODDO Local-First Smart Grocery List",
+    description:
+      "Review FODDO's Terms of Service: offline operation responsibilities, local data ownership, and licensing terms.",
+    url: "https://foddo.itechills.com/terms",
+    siteName: "FODDO by iTechills",
+  },
 };
 
 const sections: LegalSection[] = [
@@ -119,11 +129,11 @@ export default function TermsPage() {
           <div className="mt-4 flex items-center gap-3">
             <span className="text-sm text-muted-foreground">For legal inquiries or support:</span>
             <a
-              href="mailto:support@foddo.app"
+              href="mailto:hello@itechills.com"
               className="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-card"
             >
               <Mail className="h-4 w-4" />
-              <span>support@foddo.app</span>
+              <span>hello@itechills.com</span>
             </a>
           </div>
         </section>

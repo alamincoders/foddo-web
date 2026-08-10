@@ -106,7 +106,7 @@ export function TTFVSection() {
                   <Check className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <strong className="text-primary">Local SQLite Speed:</strong> Sub-millisecond database read/writes directly on your device.
+                  <strong className="text-primary">Instant Local Storage:</strong> Sub-millisecond read/writes directly on your device.
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -144,7 +144,7 @@ export function TTFVSection() {
               03
             </div>
             <h3 className="font-bold text-foreground text-base">3. Tap Done</h3>
-            <p className="mt-2 text-xs text-muted-foreground">Item saved locally in SQLite in under 3 seconds total.</p>
+            <p className="mt-2 text-xs text-muted-foreground">Item saved locally on device in under 3 seconds total.</p>
           </div>
         </div>
       </div>

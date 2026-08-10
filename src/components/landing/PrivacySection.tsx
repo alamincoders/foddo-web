@@ -24,9 +24,9 @@ export function PrivacySection() {
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-muted text-primary mb-5">
               <HardDrive className="h-6 w-6" />
             </div>
-            <h3 className="text-lg font-bold text-foreground">Local SQLite Database</h3>
+            <h3 className="text-lg font-bold text-foreground">100% On-Device Storage</h3>
             <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-              All your shopping lists and items are persisted directly in an encrypted SQLite database on your device. Instant reads and writes without waiting for network pings.
+              All your shopping lists and items are persisted directly on your device. Instant reads and writes with zero network tracking.
             </p>
           </div>
 

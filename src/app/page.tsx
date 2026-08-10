@@ -1,19 +1,27 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/landing/HeroSection";
-import { TTFVSection } from "@/components/landing/TTFVSection";
-import { FeatureGrid } from "@/components/landing/FeatureGrid";
-import { PrivacySection } from "@/components/landing/PrivacySection";
+import { EcosystemShowcase } from "@/components/landing/EcosystemShowcase";
+import { TTFVPipelineSection } from "@/components/landing/TTFVPipelineSection";
+import { FeatureStickyJourney } from "@/components/landing/FeatureStickyJourney";
+import { FamilySyncSection } from "@/components/landing/FamilySyncSection";
+import { LocalPrivacyBento } from "@/components/landing/LocalPrivacyBento";
+import { FAQSection } from "@/components/landing/FAQSection";
+import { FinalCTASection } from "@/components/landing/FinalCTASection";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-background font-sans selection:bg-primary/20 selection:text-primary">
+    <div className="flex min-h-screen flex-col bg-background font-sans selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Navbar />
       <main className="flex-1">
         <HeroSection />
-        <TTFVSection />
-        <FeatureGrid />
-        <PrivacySection />
+        <EcosystemShowcase />
+        <TTFVPipelineSection />
+        <FeatureStickyJourney />
+        <FamilySyncSection />
+        <LocalPrivacyBento />
+        <FAQSection />
+        <FinalCTASection />
       </main>
       <Footer />
     </div>
