@@ -32,10 +32,10 @@ export function FeatureStickyJourney() {
         </div>
 
         {/* Feature 1: Bazar Mode Spotlight (Large Hero Feature) */}
-        <div id="bazar-mode" className="mb-24 sm:mb-32 rounded-3xl border border-black/8 dark:border-white/10 bg-card p-6 sm:p-10 lg:p-14 shadow-soft-2xl relative overflow-hidden">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-14">
-            {/* Left Narrative Column */}
-            <div className="lg:col-span-7 space-y-6">
+        <div id="bazar-mode" className="mb-20 sm:mb-32 rounded-3xl border border-black/8 dark:border-white/10 bg-card p-6 sm:p-10 lg:p-14 shadow-soft-2xl relative overflow-hidden">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
+            {/* Narrative Column: Order 2 on mobile, Order 1 on desktop */}
+            <div className="lg:col-span-7 space-y-6 order-2 lg:order-1">
               <Reveal direction="left">
                 <div className="inline-flex items-center gap-2 rounded-xl bg-accent-muted px-3.5 py-1.5 text-xs font-bold text-accent">
                   <ShoppingBag className="h-4 w-4" />
@@ -44,7 +44,7 @@ export function FeatureStickyJourney() {
               </Reveal>
 
               <Reveal direction="left" delay={0.1}>
-                <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2]">
+                <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2] text-balance">
                   Transform Supermarket Chaos into Satisfying Progress
                 </h3>
               </Reveal>
@@ -100,9 +100,9 @@ export function FeatureStickyJourney() {
               </Reveal>
             </div>
 
-            {/* Right Card Column: Full 2:3 Marketing Poster */}
-            <div className="lg:col-span-5 flex justify-center">
-              <Reveal direction="right" delay={0.2} className="relative w-full max-w-[360px] sm:max-w-[400px]">
+            {/* Right Card Column: Order 1 on mobile (Image First), Order 2 on desktop */}
+            <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
+              <Reveal direction="right" delay={0.2} className="relative w-full max-w-[320px] sm:max-w-[380px] xl:max-w-[400px]">
                 <div className="group relative rounded-3xl border border-black/8 dark:border-white/12 bg-card p-2.5 shadow-soft-2xl transition-all duration-300 hover:shadow-2xl">
                   <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
@@ -121,10 +121,10 @@ export function FeatureStickyJourney() {
 
         {/* Feature 2: All Your Lists Always Organized (Lists.png) */}
         <div className="rounded-3xl border border-black/8 dark:border-white/10 bg-card p-6 sm:p-10 lg:p-14 shadow-soft-2xl relative overflow-hidden">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-14">
-            {/* Left Card Column: Full 2:3 Marketing Poster */}
-            <div className="order-2 lg:order-1 lg:col-span-5 flex justify-center">
-              <Reveal direction="left" delay={0.2} className="relative w-full max-w-[360px] sm:max-w-[400px]">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
+            {/* Card Column: Order 1 on mobile (Image First), Order 1 on desktop */}
+            <div className="order-1 lg:col-span-5 flex justify-center">
+              <Reveal direction="left" delay={0.2} className="relative w-full max-w-[320px] sm:max-w-[380px] xl:max-w-[400px]">
                 <div className="group relative rounded-3xl border border-black/8 dark:border-white/12 bg-card p-2.5 shadow-soft-2xl transition-all duration-300 hover:shadow-2xl">
                   <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
@@ -139,8 +139,8 @@ export function FeatureStickyJourney() {
               </Reveal>
             </div>
 
-            {/* Right Narrative Column */}
-            <div className="order-1 lg:order-2 lg:col-span-7 space-y-6">
+            {/* Narrative Column: Order 2 on mobile, Order 2 on desktop */}
+            <div className="order-2 lg:col-span-7 space-y-6">
               <Reveal direction="right">
                 <div className="inline-flex items-center gap-2 rounded-xl bg-primary-muted px-3.5 py-1.5 text-xs font-bold text-primary">
                   <Layers className="h-4 w-4" />
@@ -149,7 +149,7 @@ export function FeatureStickyJourney() {
               </Reveal>
 
               <Reveal direction="right" delay={0.1}>
-                <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2]">
+                <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2] text-balance">
                   All Your Lists, Always Organized
                 </h3>
               </Reveal>

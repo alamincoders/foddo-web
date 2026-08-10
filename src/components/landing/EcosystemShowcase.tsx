@@ -53,7 +53,7 @@ export function EcosystemShowcase() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.25] lg:leading-[1.2]">
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.25] lg:leading-[1.2] text-balance">
               Everything in One Place. <br className="hidden sm:inline" />
               <span className="text-primary mt-1 inline-block">Plan. Shop. Done.</span>
             </h2>
@@ -66,8 +66,8 @@ export function EcosystemShowcase() {
           </Reveal>
         </div>
 
-        {/* Panoramic 8-Screen Showcase Card with Scroll-Driven Parallax & Scale */}
-        <div className="relative mx-auto max-w-6xl">
+        {/* Desktop View: Panoramic 8-Screen Showcase Card (hidden md:block) */}
+        <div className="hidden md:block relative mx-auto max-w-6xl">
           <motion.div
             style={{
               scale,
@@ -112,6 +112,46 @@ export function EcosystemShowcase() {
               </div>
             </div>
           </motion.div>
+        </div>
+
+        {/* Dedicated Mobile View: Crystal-Clear High-Res Phone Showcase (md:hidden) */}
+        <div className="block md:hidden relative mx-auto max-w-sm">
+          <div className="rounded-3xl border border-black/8 dark:border-white/12 bg-card p-3 shadow-soft-2xl relative overflow-hidden">
+            {/* Ambient Glow */}
+            <div className="absolute -inset-0.5 rounded-3xl bg-linear-to-b from-primary/20 via-transparent to-accent/10 -z-10 opacity-70 blur-xs" />
+
+            {/* Sharp, Full 2:3 High-Res Phone Mockup */}
+            <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
+              <Image
+                src="/images/bazar-mode.png"
+                alt="Foddo Mobile App UI Showcase"
+                fill
+                sizes="100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+
+            {/* Mobile 2x2 Feature Badges */}
+            <div className="mt-4 pt-3 border-t border-border/60 grid grid-cols-2 gap-2 text-left">
+              <div className="flex items-center gap-2 text-[11px] font-semibold text-muted-foreground">
+                <Zap className="h-3.5 w-3.5 text-primary shrink-0" />
+                <span>100% Local & Offline</span>
+              </div>
+              <div className="flex items-center gap-2 text-[11px] font-semibold text-muted-foreground">
+                <Smartphone className="h-3.5 w-3.5 text-accent shrink-0" />
+                <span>1-Handed Focus</span>
+              </div>
+              <div className="flex items-center gap-2 text-[11px] font-semibold text-muted-foreground">
+                <Shield className="h-3.5 w-3.5 text-primary shrink-0" />
+                <span>100% Private & Free</span>
+              </div>
+              <div className="flex items-center gap-2 text-[11px] font-semibold text-muted-foreground">
+                <Sparkles className="h-3.5 w-3.5 text-accent shrink-0" />
+                <span>Bangla & English</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

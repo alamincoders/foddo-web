@@ -18,7 +18,7 @@ export function LocalPrivacyBento() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2]">
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2] text-balance">
               Your Grocery Lists Stay <br className="hidden sm:inline" />
               <span className="text-primary mt-1 inline-block">100% Private & In Your Control</span>
             </h2>
@@ -98,52 +98,52 @@ export function LocalPrivacyBento() {
           </Reveal>
         </div>
 
-        {/* 4 Core Pillars Grid */}
-        <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+        {/* 4 Core Pillars Grid (2x2 on mobile, 4-cols on lg) */}
+        <StaggerContainer className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4 items-stretch">
           <StaggerItem className="h-full flex">
-            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4 shrink-0">
-                <HardDrive className="h-5 w-5" />
+            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-3.5 sm:p-5 xl:p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
+              <div className="flex h-8 w-8 sm:h-10 sm:w-10 xl:h-11 xl:w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-2.5 sm:mb-3.5 xl:mb-4 shrink-0">
+                <HardDrive className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
-              <h4 className="text-base font-bold text-foreground">100% On-Device Storage</h4>
-              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                All lists and prices are written directly to your phone with zero network delay and zero cloud tracking.
+              <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">100% Local Storage</h4>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
+                All lists and prices written directly to your phone. Zero cloud tracking.
               </p>
             </div>
           </StaggerItem>
 
           <StaggerItem className="h-full flex">
-            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4 shrink-0">
-                <UserX className="h-5 w-5" />
+            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-3.5 sm:p-5 xl:p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
+              <div className="flex h-8 w-8 sm:h-10 sm:w-10 xl:h-11 xl:w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-2.5 sm:mb-3.5 xl:mb-4 shrink-0">
+                <UserX className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
-              <h4 className="text-base font-bold text-foreground">Zero Account Gate</h4>
-              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                No mandatory sign-in, email validation, or phone verification required to manage unlimited grocery lists.
+              <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">Zero Account Gate</h4>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
+                No sign-in, email validation, or phone OTP required for unlimited lists.
               </p>
             </div>
           </StaggerItem>
 
           <StaggerItem className="h-full flex">
-            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4 shrink-0">
-                <Lock className="h-5 w-5" />
+            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-3.5 sm:p-5 xl:p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
+              <div className="flex h-8 w-8 sm:h-10 sm:w-10 xl:h-11 xl:w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-2.5 sm:mb-3.5 xl:mb-4 shrink-0">
+                <Lock className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
-              <h4 className="text-base font-bold text-foreground">Contextual Demographics</h4>
-              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                Demographic inputs (gender/age) are 100% optional—used strictly for tailored household product suggestions.
+              <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">Optional Demographics</h4>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
+                Gender/age are 100% optional—used only for smart household tips.
               </p>
             </div>
           </StaggerItem>
 
           <StaggerItem className="h-full flex">
-            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-4 shrink-0">
-                <DownloadCloud className="h-5 w-5" />
+            <div className="h-full w-full flex flex-col justify-start rounded-2xl border border-border/70 bg-card p-3.5 sm:p-5 xl:p-6 shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-200">
+              <div className="flex h-8 w-8 sm:h-10 sm:w-10 xl:h-11 xl:w-11 items-center justify-center rounded-xl bg-primary-muted text-primary mb-2.5 sm:mb-3.5 xl:mb-4 shrink-0">
+                <DownloadCloud className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
-              <h4 className="text-base font-bold text-foreground">JSON Export & Backup</h4>
-              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                You own your data completely. Export, backup, or restore your entire shopping history anytime with 1 tap.
+              <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">JSON Export & Backup</h4>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
+                You own your data. Export, backup, or restore shopping history anytime.
               </p>
             </div>
           </StaggerItem>

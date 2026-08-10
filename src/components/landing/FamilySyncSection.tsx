@@ -77,15 +77,15 @@ export function FamilySyncSection() {
           </Reveal>
 
           {/* Framer-Style Animated Pill Tabs */}
-          <Reveal direction="up" delay={0.3} className="mt-10 flex justify-center">
-            <div className="inline-flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-border/80 bg-surface/70 p-1.5 backdrop-blur-md shadow-xs">
+          <Reveal direction="up" delay={0.3} className="mt-8 sm:mt-10 flex justify-center">
+            <div className="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 rounded-2xl border border-border/80 bg-surface/70 p-1 sm:p-1.5 backdrop-blur-md shadow-xs">
               {TABS.map((tab) => {
                 const isActive = activeTab.id === tab.id;
                 return (
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab)}
-                    className={`relative rounded-xl px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer ${
+                    className={`relative rounded-xl px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer ${
                       isActive ? "text-primary font-extrabold" : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
@@ -105,10 +105,10 @@ export function FamilySyncSection() {
         </div>
 
         {/* Tab Content Display */}
-        <div className="rounded-3xl border border-black/8 dark:border-white/10 bg-card p-6 sm:p-10 lg:p-14 shadow-soft-2xl relative overflow-hidden">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-14">
-            {/* Left Column: Dynamic Narrative & Bullets */}
-            <div className="lg:col-span-7 space-y-6">
+        <div className="rounded-3xl border border-black/8 dark:border-white/10 bg-card p-5 sm:p-10 lg:p-14 shadow-soft-2xl relative overflow-hidden">
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-14">
+            {/* Narrative Column: Order 2 on Mobile, Order 1 on Desktop */}
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6 order-2 lg:order-1">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab.id}
@@ -116,37 +116,46 @@ export function FamilySyncSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -12 }}
                   transition={{ duration: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
-                  className="space-y-6"
+                  className="space-y-5 sm:space-y-6"
                 >
                   <div className="inline-flex items-center gap-2 rounded-xl bg-primary-muted px-3.5 py-1.5 text-xs font-bold text-primary">
                     <Sparkles className="h-4 w-4" />
                     <span>{activeTab.label}</span>
                   </div>
 
-                  <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2]">{activeTab.tagline}</h3>
+                  <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2] text-balance">
+                    {activeTab.tagline}
+                  </h3>
 
-                  <p className="text-base text-muted-foreground leading-relaxed">{activeTab.description}</p>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{activeTab.description}</p>
 
-                  <ul className="space-y-3.5 text-sm text-foreground pt-2">
+                  <ul className="space-y-3 text-xs sm:text-sm text-foreground pt-1 sm:pt-2">
                     {activeTab.bullets.map((bullet, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      <li key={index} className="flex items-start gap-2.5 sm:gap-3">
+                        <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-primary shrink-0 mt-0.5" />
                         <span>{bullet}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <div className="pt-4 flex items-center gap-2 text-xs font-semibold text-primary">
-                    <ShieldCheck className="h-4 w-4" />
-                    <span>Private household encryption • Zero third-party data tracking</span>
+                  <div className="pt-2 sm:pt-4 flex items-center gap-2 text-xs font-semibold text-primary">
+                    <ShieldCheck className="h-4 w-4 shrink-0" />
+                    <span>Private household encryption • Zero third-party tracking</span>
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
 
-            {/* Right Column: Full 2:3 Marketing Poster with Crossfade Transition */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-[360px] sm:max-w-[400px]">
+            {/* Poster Column: Order 1 on Mobile (Image First), Order 2 on Desktop */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center order-1 lg:order-2">
+              {/* Mobile Quick Household Context Badge */}
+              <div className="flex sm:hidden items-center justify-center gap-2 py-1.5 px-3 rounded-full bg-surface border border-border/70 text-[11px] font-semibold text-foreground mb-4">
+                <span className="text-primary font-bold">🛒 Dad (At Market)</span>
+                <span className="text-muted-foreground">↔</span>
+                <span className="text-accent font-bold">🏠 Mom (At Home)</span>
+              </div>
+
+              <div className="relative w-full max-w-[300px] sm:max-w-[360px] xl:max-w-[400px]">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeTab.id}

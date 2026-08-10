@@ -12,7 +12,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md transition-all">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-[1.02]">
+        <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-[1.02] shrink-0">
           <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-primary shadow-sm shadow-primary/20">
             <Image
               src="/icon.png"
@@ -34,66 +34,66 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-3.5 xl:gap-6 2xl:gap-7 lg:flex">
           <Link
             href="#features"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            className="text-[13px] xl:text-sm font-medium whitespace-nowrap text-muted-foreground transition-colors hover:text-primary"
           >
             Features
           </Link>
           <Link
             href="#speed"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            className="text-[13px] xl:text-sm font-medium whitespace-nowrap text-muted-foreground transition-colors hover:text-primary"
           >
             Instant Speed
           </Link>
           <Link
             href="#smart-input"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary flex items-center gap-1"
+            className="text-[13px] xl:text-sm font-medium whitespace-nowrap text-muted-foreground transition-colors hover:text-primary"
           >
-            <span>Smart Parser</span>
+            Smart Parser
           </Link>
           <Link
             href="#bazar-mode"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            className="text-[13px] xl:text-sm font-medium whitespace-nowrap text-muted-foreground transition-colors hover:text-primary"
           >
             Bazar Mode
           </Link>
           <Link
             href="#privacy"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            className="text-[13px] xl:text-sm font-medium whitespace-nowrap text-muted-foreground transition-colors hover:text-primary"
           >
             Privacy
           </Link>
           <Link
             href="#faq"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            className="text-[13px] xl:text-sm font-medium whitespace-nowrap text-muted-foreground transition-colors hover:text-primary"
           >
             FAQ
           </Link>
           <Link
             href="/privacy"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            className="text-[13px] xl:text-sm font-medium whitespace-nowrap text-muted-foreground transition-colors hover:text-primary"
           >
             Legal
           </Link>
         </nav>
 
         {/* Play Store CTA */}
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-4 lg:flex shrink-0">
           <a
             href="https://play.google.com/store"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-primary/25 transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 active:scale-[0.98]"
+            className="whitespace-nowrap inline-flex items-center gap-1.5 rounded-xl bg-primary px-3 py-2 text-xs font-semibold text-white shadow-md shadow-primary/25 transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 active:scale-[0.98] xl:gap-2 xl:px-4 xl:py-2.5 xl:text-sm"
           >
-            <ArrowDownToLine className="h-4 w-4" />
+            <ArrowDownToLine className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
             <span>Get on Play Store</span>
           </a>
         </div>
 
         {/* Mobile menu button */}
-        <div className="flex md:hidden">
+        <div className="flex lg:hidden">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -112,7 +112,7 @@ export function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="border-b border-border bg-background px-4 pb-6 pt-2 md:hidden">
+        <div className="border-b border-border bg-background px-4 pb-6 pt-2 lg:hidden">
           <div className="flex flex-col space-y-3">
             <Link
               href="#features"

@@ -50,7 +50,7 @@ export function TTFVPipelineSection() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2]">
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2] text-balance">
               From Launch to &quot;Milk&quot; in Under <span className="text-primary">3 Seconds</span>
             </h2>
           </Reveal>
@@ -66,21 +66,21 @@ export function TTFVPipelineSection() {
         <Reveal direction="up" delay={0.3} className="mb-20">
           <div className="relative rounded-3xl border border-border/80 bg-surface/50 p-6 sm:p-10 shadow-xs">
             {/* Header pill */}
-            <div className="flex items-center justify-between border-b border-border/60 pb-5 mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-border/60 pb-5 mb-8">
               <div className="flex items-center gap-2 font-bold text-foreground text-sm sm:text-base">
-                <Sparkles className="h-4 w-4 text-primary" />
+                <Sparkles className="h-4 w-4 text-primary shrink-0" />
                 <span>The Sub-3-Second Execution Journey</span>
               </div>
-              <span className="rounded-full bg-primary-muted px-3 py-1 text-xs font-extrabold text-primary">
+              <span className="self-start sm:self-auto rounded-full bg-primary-muted px-3 py-1 text-xs font-extrabold text-primary">
                 Total Elapsed: &lt; 3.0s
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-              {PIPELINE_STEPS.map((item, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6 relative">
+              {PIPELINE_STEPS.map((item) => (
                 <div
                   key={item.step}
-                  className="relative flex flex-col justify-between rounded-2xl border border-border/70 bg-card p-5 shadow-xs transition-all duration-300 hover:shadow-md hover:border-primary/40 hover:-translate-y-1 group"
+                  className="relative flex flex-col justify-between rounded-2xl border border-border/70 bg-card p-4 sm:p-5 xl:p-6 shadow-xs transition-all duration-300 hover:shadow-md hover:border-primary/40 hover:-translate-y-1 group"
                 >
                   {/* Top Bar with Number & Time Badge */}
                   <div>
@@ -90,7 +90,7 @@ export function TTFVPipelineSection() {
                         {item.time}
                       </span>
                     </div>
-                    <h3 className="font-bold text-foreground text-base group-hover:text-primary transition-colors">
+                    <h3 className="font-bold text-foreground text-sm xl:text-base group-hover:text-primary transition-colors">
                       {item.title}
                     </h3>
                     <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
@@ -110,18 +110,18 @@ export function TTFVPipelineSection() {
         </Reveal>
 
         {/* Side-by-Side Comparison Grid with New Bazar Card */}
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
-          {/* Left Column: Side-by-Side Comparison Boxes */}
-          <div className="lg:col-span-7 space-y-6">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
+          {/* Comparison Boxes: Order 2 on Mobile, Order 1 on Desktop */}
+          <div className="lg:col-span-7 space-y-6 order-2 lg:order-1">
             <Reveal direction="left">
               {/* Traditional Grocery App (Slow & Frustrating) */}
-              <div className="rounded-3xl border border-red-200/80 dark:border-red-950/80 bg-card p-6 sm:p-7 shadow-xs">
-                <div className="flex items-center justify-between border-b border-border/60 pb-3 mb-4">
+              <div className="rounded-3xl border border-red-200/80 dark:border-red-950/80 bg-card p-5 sm:p-7 shadow-xs">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 border-b border-border/60 pb-3 mb-4">
                   <div className="flex items-center gap-2 text-red-600 dark:text-red-400 font-bold text-sm">
-                    <Clock className="h-4 w-4" />
+                    <Clock className="h-4 w-4 shrink-0" />
                     <span>Other Grocery & Cloud Apps</span>
                   </div>
-                  <span className="rounded-full bg-red-100 dark:bg-red-900/40 px-3 py-1 text-xs font-bold text-red-600 dark:text-red-400">
+                  <span className="self-start sm:self-auto rounded-full bg-red-100 dark:bg-red-900/40 px-3 py-1 text-xs font-bold text-red-600 dark:text-red-400">
                     Avg. ~120 Seconds
                   </span>
                 </div>
@@ -149,13 +149,13 @@ export function TTFVPipelineSection() {
 
             <Reveal direction="left" delay={0.15}>
               {/* Foddo Local-First Standard */}
-              <div className="rounded-3xl border-2 border-primary bg-card p-6 sm:p-7 shadow-xl ring-1 ring-primary/20 relative overflow-hidden">
-                <div className="flex items-center justify-between border-b border-border/60 pb-3 mb-4">
+              <div className="rounded-3xl border-2 border-primary bg-card p-5 sm:p-7 shadow-xl ring-1 ring-primary/20 relative overflow-hidden">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 border-b border-border/60 pb-3 mb-4">
                   <div className="flex items-center gap-2 text-primary font-bold text-sm">
-                    <Zap className="h-4 w-4 fill-primary" />
+                    <Zap className="h-4 w-4 fill-primary shrink-0" />
                     <span>Foddo Local-First Standard</span>
                   </div>
-                  <span className="rounded-full bg-primary-muted px-3 py-1 text-xs font-extrabold text-primary">
+                  <span className="self-start sm:self-auto rounded-full bg-primary-muted px-3 py-1 text-xs font-extrabold text-primary">
                     &lt; 3 Seconds Total
                   </span>
                 </div>
@@ -182,9 +182,9 @@ export function TTFVPipelineSection() {
             </Reveal>
           </div>
 
-          {/* Right Column: Natural 2:3 Marketing Card for New Bazar Creation */}
-          <div className="lg:col-span-5 flex justify-center">
-            <Reveal direction="right" delay={0.2} className="relative w-full max-w-[340px] sm:max-w-[380px]">
+          {/* Right Column: Order 1 on Mobile (Image First), Order 2 on Desktop */}
+          <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
+            <Reveal direction="right" delay={0.2} className="relative w-full max-w-[320px] sm:max-w-[380px]">
               <div className="group relative rounded-3xl border border-black/8 dark:border-white/12 bg-card p-2.5 shadow-soft-2xl transition-all duration-300 hover:shadow-2xl">
                 <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
                   <Image

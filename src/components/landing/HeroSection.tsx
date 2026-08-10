@@ -40,7 +40,7 @@ export function HeroSection() {
       <div className="pointer-events-none absolute top-1/2 right-[-10%] -z-10 h-96 w-96 rounded-full bg-primary-muted/50 blur-3xl" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8 xl:gap-12">
           {/* Left Column: Headlines & CTAs */}
           <div className="flex flex-col items-center text-center lg:col-span-7 lg:items-start lg:text-left">
             {/* Pill Badge */}
@@ -53,14 +53,14 @@ export function HeroSection() {
 
             {/* Main Headline */}
             <Reveal direction="up" delay={0.2}>
-              <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-[1.2] sm:leading-[1.16] lg:leading-[1.14]">
+              <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-[42px] xl:text-6xl leading-[1.2] sm:leading-[1.16] lg:leading-[1.15] text-balance">
                 The Smart, <span className="text-primary underline decoration-primary/20 underline-offset-8">Local-First</span> Grocery List Built For Speed
               </h1>
             </Reveal>
 
             {/* Subtitle */}
             <Reveal direction="up" delay={0.3}>
-              <p className="mt-6 text-lg text-muted-foreground sm:text-xl leading-relaxed max-w-2xl font-normal">
+              <p className="mt-6 text-base sm:text-lg lg:text-base xl:text-xl text-muted-foreground leading-relaxed max-w-2xl font-normal">
                 Launch, type &quot;Milk&quot;, and you&apos;re done in under 3 seconds. Zero registration walls, 100% on-device privacy, and Bazar Mode goal tracking for frictionless shopping.
               </p>
             </Reveal>
@@ -72,15 +72,15 @@ export function HeroSection() {
                   href="https://play.google.com/store"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-2xl bg-primary px-8 py-4 text-base font-bold text-white shadow-xl shadow-primary/25 transition-all duration-200 hover:bg-primary/95 hover:shadow-2xl hover:shadow-primary/35 hover:-translate-y-0.5 active:translate-y-0"
+                  className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-2xl bg-primary px-6 py-3.5 text-sm xl:px-8 xl:py-4 xl:text-base font-bold text-white shadow-xl shadow-primary/25 transition-all duration-200 hover:bg-primary/95 hover:shadow-2xl hover:shadow-primary/35 hover:-translate-y-0.5 active:translate-y-0"
                 >
-                  <ArrowDownToLine className="h-5 w-5 transition-transform group-hover:translate-y-0.5" />
+                  <ArrowDownToLine className="h-4 w-4 xl:h-5 xl:w-5 transition-transform group-hover:translate-y-0.5" />
                   <span>Get it on Google Play</span>
                 </a>
 
                 <a
                   href="#bazar-mode"
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl border border-border bg-card/80 backdrop-blur-xs px-6 py-4 text-base font-semibold text-foreground shadow-xs transition-all duration-200 hover:bg-surface hover:border-primary/30 hover:text-primary hover:-translate-y-0.5"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl border border-border bg-card/80 backdrop-blur-xs px-5 py-3.5 text-sm xl:px-6 xl:py-4 xl:text-base font-semibold text-foreground shadow-xs transition-all duration-200 hover:bg-surface hover:border-primary/30 hover:text-primary hover:-translate-y-0.5"
                 >
                   <Sparkles className="h-4 w-4 text-primary" />
                   <span>See Bazar Mode</span>
@@ -90,29 +90,29 @@ export function HeroSection() {
 
             {/* Micro Feature Indicators */}
             <Reveal direction="up" delay={0.5} className="w-full max-w-lg">
-              <div className="mt-10 grid grid-cols-3 gap-4 border-t border-border/70 pt-6 w-full">
+              <div className="mt-10 grid grid-cols-3 gap-2 sm:gap-4 border-t border-border/70 pt-6 w-full">
                 <div className="flex flex-col items-center lg:items-start">
-                  <div className="flex items-center gap-1.5 text-sm font-bold text-foreground">
-                    <CheckCircle2 className="h-4 w-4 text-primary" />
+                  <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-foreground">
+                    <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary" />
                     <span>&lt; 3 Seconds</span>
                   </div>
-                  <span className="text-xs text-muted-foreground mt-0.5">Time to First Value</span>
+                  <span className="text-[11px] sm:text-xs text-muted-foreground mt-0.5">Time to First Value</span>
                 </div>
 
                 <div className="flex flex-col items-center lg:items-start">
-                  <div className="flex items-center gap-1.5 text-sm font-bold text-foreground">
-                    <ShieldCheck className="h-4 w-4 text-primary" />
+                  <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-foreground">
+                    <ShieldCheck className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary" />
                     <span>100% Local</span>
                   </div>
-                  <span className="text-xs text-muted-foreground mt-0.5">On-Device Storage</span>
+                  <span className="text-[11px] sm:text-xs text-muted-foreground mt-0.5">On-Device Storage</span>
                 </div>
 
                 <div className="flex flex-col items-center lg:items-start">
-                  <div className="flex items-center gap-1.5 text-sm font-bold text-foreground">
-                    <ShoppingCart className="h-4 w-4 text-primary" />
+                  <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-foreground">
+                    <ShoppingCart className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary" />
                     <span>Bazar Mode</span>
                   </div>
-                  <span className="text-xs text-muted-foreground mt-0.5">Goal Gradient</span>
+                  <span className="text-[11px] sm:text-xs text-muted-foreground mt-0.5">Goal Gradient</span>
                 </div>
               </div>
             </Reveal>
@@ -120,7 +120,7 @@ export function HeroSection() {
 
           {/* Right Column: Natural Marketing Poster Showcase */}
           <div className="flex justify-center lg:col-span-5 perspective-1200">
-            <Reveal direction="none" delay={0.3} duration={0.8} className="relative w-full max-w-[360px] sm:max-w-[400px]">
+            <Reveal direction="none" delay={0.3} duration={0.8} className="relative w-full max-w-[320px] sm:max-w-[360px] xl:max-w-[400px]">
               <motion.div
                 ref={cardRef}
                 onMouseMove={handleMouseMove}
@@ -154,15 +154,15 @@ export function HeroSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7, duration: 0.5 }}
-                  className="absolute -bottom-5 -left-5 z-30 flex items-center gap-3 rounded-2xl border border-border/80 bg-card/95 p-3.5 shadow-xl backdrop-blur-md transition-transform duration-300 hover:scale-105"
+                  className="absolute -bottom-5 -left-5 z-30 flex items-center gap-2.5 sm:gap-3 rounded-2xl border border-border/80 bg-card/95 p-2.5 sm:p-3.5 shadow-xl backdrop-blur-md transition-transform duration-300 hover:scale-105"
                   style={{ transform: "translateZ(30px)" }}
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-muted text-accent font-bold text-lg">
+                  <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-accent-muted text-accent font-bold text-base sm:text-lg">
                     ⚡
                   </div>
                   <div>
                     <div className="text-xs font-bold text-foreground">Instant Add</div>
-                    <div className="text-[11px] text-muted-foreground">Type &apos;Milk&apos; → Done &lt;3s</div>
+                    <div className="text-[10px] sm:text-[11px] text-muted-foreground">Type &apos;Milk&apos; → Done &lt;3s</div>
                   </div>
                 </motion.div>
 
@@ -171,15 +171,15 @@ export function HeroSection() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8, duration: 0.5 }}
-                  className="absolute -top-4 -right-4 z-30 flex items-center gap-2.5 rounded-2xl border border-border/80 bg-card/95 p-3 shadow-xl backdrop-blur-md transition-transform duration-300 hover:scale-105"
+                  className="absolute -top-4 -right-4 z-30 flex items-center gap-2 sm:gap-2.5 rounded-2xl border border-border/80 bg-card/95 p-2.5 sm:p-3 shadow-xl backdrop-blur-md transition-transform duration-300 hover:scale-105"
                   style={{ transform: "translateZ(30px)" }}
                 >
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-muted text-primary">
-                    <ShieldCheck className="h-4.5 w-4.5" />
+                  <div className="flex h-7 w-7 sm:h-9 sm:w-9 items-center justify-center rounded-xl bg-primary-muted text-primary">
+                    <ShieldCheck className="h-3.5 w-3.5 sm:h-4.5 sm:w-4.5" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-foreground">Zero Cloud Gate</div>
-                    <div className="text-[10px] text-muted-foreground">100% Private & Local</div>
+                    <div className="text-[9px] sm:text-[10px] text-muted-foreground">100% Private & Local</div>
                   </div>
                 </motion.div>
               </motion.div>
