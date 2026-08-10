@@ -1,9 +1,9 @@
 "use client";
 
+import { Layers, Shield, Smartphone, Sparkles, Zap } from "lucide-react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
-import { Sparkles, Layers, Shield, Zap, Smartphone, CheckCircle2 } from "lucide-react";
-import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import { Reveal } from "./motion/Reveal";
 
 export function EcosystemShowcase() {
@@ -35,10 +35,7 @@ export function EcosystemShowcase() {
   const glowOpacity = useTransform(smoothProgress, [0, 0.45, 1], [0.3, 0.85, 0.4]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="py-20 sm:py-32 bg-surface/40 border-y border-border/70 overflow-hidden relative perspective-1200"
-    >
+    <section ref={sectionRef} className="py-20 sm:py-32 bg-surface/40 border-y border-border/70 overflow-hidden relative perspective-1200">
       {/* Background Ambient Gradient */}
       <motion.div
         style={{ opacity: glowOpacity }}
@@ -87,7 +84,7 @@ export function EcosystemShowcase() {
             <div className="relative aspect-[1535/1024] w-full overflow-hidden rounded-2xl bg-surface">
               <Image
                 src="/images/overview.png"
-                alt="FODDO 8-Screen Application Ecosystem - Plan, Shop, Done"
+                alt="Foddo 8-Screen Application Ecosystem - Plan, Shop, Done"
                 fill
                 sizes="(max-width: 1200px) 100vw, 1200px"
                 className="object-contain sm:object-cover transition-transform duration-700 group-hover:scale-[1.01]"

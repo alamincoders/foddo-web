@@ -1,4 +1,4 @@
-import { ShieldCheck, HardDrive, UserX, Lock, ArrowDownToLine } from "lucide-react";
+import { ArrowDownToLine, HardDrive, Lock, ShieldCheck, UserX } from "lucide-react";
 
 export function PrivacySection() {
   return (
@@ -14,7 +14,8 @@ export function PrivacySection() {
             Your Grocery Lists Stay <span className="text-primary">100% Private</span>
           </h2>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg leading-relaxed">
-            FODDO is architected from the ground up as a local-first application. We don&apos;t collect your personal lists, store your grocery habits on central cloud servers, or sell advertising data.
+            Foddo is architected from the ground up as a local-first application. We don&apos;t collect your personal lists, store your grocery habits on central cloud servers, or sell advertising
+            data.
           </p>
         </div>
 
@@ -64,11 +65,9 @@ export function PrivacySection() {
         {/* Play Store Download Callout Card */}
         <div className="mt-20 rounded-3xl bg-gradient-to-r from-primary via-primary-soft to-primary p-8 sm:p-12 text-white shadow-2xl text-center relative overflow-hidden">
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
-            <h3 className="text-3xl font-extrabold sm:text-4xl">
-              Ready to Upgrade Your Grocery Shopping?
-            </h3>
+            <h3 className="text-3xl font-extrabold sm:text-4xl">Ready to Upgrade Your Grocery Shopping?</h3>
             <p className="text-white/90 text-base sm:text-lg leading-relaxed">
-              Experience the instant speed of FODDO today. Download free from Google Play and start organizing shopping trips in under 3 seconds.
+              Experience the instant speed of Foddo today. Download free from Google Play and start organizing shopping trips in under 3 seconds.
             </p>
             <div className="pt-4 flex justify-center">
               <a
@@ -78,7 +77,7 @@ export function PrivacySection() {
                 className="inline-flex items-center gap-3 rounded-2xl bg-white px-8 py-4 text-base font-extrabold text-primary shadow-xl hover:bg-slate-50 transition-all hover:scale-105 active:scale-100"
               >
                 <ArrowDownToLine className="h-5 w-5 text-primary" />
-                <span>Get FODDO on Google Play</span>
+                <span>Get Foddo on Google Play</span>
               </a>
             </div>
           </div>

@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { HelpCircle, ChevronDown, Sparkles, Mail, ExternalLink } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
-import { Reveal } from "./motion/Reveal";
 import { FAQ_DATA } from "@/components/seo/JsonLd";
+import { ChevronDown, HelpCircle, Mail } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
+import { Reveal } from "./motion/Reveal";
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -37,7 +37,7 @@ export function FAQSection() {
 
           <Reveal direction="up" delay={0.2}>
             <p className="mt-5 text-base text-muted-foreground sm:text-lg leading-relaxed">
-              Everything you need to know about FODDO&apos;s local-first architecture, privacy guarantees, speed, and household family sync.
+              Everything you need to know about Foddo&apos;s local-first architecture, privacy guarantees, speed, and household family sync.
             </p>
           </Reveal>
         </div>
@@ -51,9 +51,7 @@ export function FAQSection() {
               <Reveal key={faq.question} direction="up" delay={0.05 * index}>
                 <div
                   className={`rounded-2xl border transition-all duration-200 ${
-                    isOpen
-                      ? "border-primary/40 bg-card shadow-soft-lg"
-                      : "border-border/80 bg-card/60 hover:border-primary/30 hover:bg-card"
+                    isOpen ? "border-primary/40 bg-card shadow-soft-lg" : "border-border/80 bg-card/60 hover:border-primary/30 hover:bg-card"
                   }`}
                 >
                   <button
@@ -62,14 +60,10 @@ export function FAQSection() {
                     aria-expanded={isOpen}
                     className="flex w-full items-center justify-between gap-4 p-5 sm:p-6 text-left cursor-pointer select-none"
                   >
-                    <span className="text-base sm:text-lg font-bold text-foreground pr-2">
-                      {faq.question}
-                    </span>
+                    <span className="text-base sm:text-lg font-bold text-foreground pr-2">{faq.question}</span>
                     <div
                       className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl transition-transform duration-200 ${
-                        isOpen
-                          ? "bg-primary text-white rotate-180"
-                          : "bg-surface text-muted-foreground"
+                        isOpen ? "bg-primary text-white rotate-180" : "bg-surface text-muted-foreground"
                       }`}
                     >
                       <ChevronDown className="h-4 w-4" />
@@ -85,9 +79,7 @@ export function FAQSection() {
                         transition={{ duration: 0.25, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="border-t border-border/60 px-5 pb-6 pt-4 sm:px-6 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                          {faq.answer}
-                        </div>
+                        <div className="border-t border-border/60 px-5 pb-6 pt-4 sm:px-6 text-sm sm:text-base text-muted-foreground leading-relaxed">{faq.answer}</div>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -102,9 +94,7 @@ export function FAQSection() {
           <div className="rounded-2xl border border-border/70 bg-card p-6 text-center sm:flex sm:items-center sm:justify-between sm:text-left">
             <div>
               <h4 className="font-bold text-foreground text-base">Have additional questions?</h4>
-              <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-                Our support engineering team is here to help you get the most out of FODDO.
-              </p>
+              <p className="text-xs sm:text-sm text-muted-foreground mt-1">Our support engineering team is here to help you get the most out of Foddo.</p>
             </div>
             <a
               href="mailto:hello@itechills.com"

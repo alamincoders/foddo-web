@@ -1,18 +1,18 @@
 export const FAQ_DATA = [
   {
-    question: "What makes FODDO different from other grocery list apps?",
+    question: "What makes Foddo different from other grocery list apps?",
     answer:
-      "FODDO is built around a local-first architecture with sub-3-second Time-To-First-Value (TTFV). There are zero forced sign-in screens, zero subscription paywalls, and zero network loading delays. Your shopping lists are stored 100% locally and privately on your phone.",
+      "Foddo is built around a local-first architecture with sub-3-second Time-To-First-Value (TTFV). There are zero forced sign-in screens, zero subscription paywalls, and zero network loading delays. Your shopping lists are stored 100% locally and privately on your phone.",
   },
   {
-    question: "Is FODDO completely free to use?",
+    question: "Is Foddo completely free to use?",
     answer:
-      "Yes, FODDO is 100% free to download and use. It contains zero intrusive ads, no subscription tiers, and no hidden paywalls.",
+      "Yes, Foddo is 100% free to download and use. It contains zero intrusive ads, no subscription tiers, and no hidden paywalls.",
   },
   {
-    question: "Does FODDO work without an internet connection?",
+    question: "Does Foddo work without an internet connection?",
     answer:
-      "Absolutely. Because FODDO stores all data directly on your device, all features—including instant list creation, smart category auto-sorting, and Bazar Mode—work 100% offline, even inside basement supermarkets with zero signal.",
+      "Absolutely. Because Foddo stores all data directly on your device, all features—including instant list creation, smart category auto-sorting, and Bazar Mode—work 100% offline, even inside basement supermarkets with zero signal.",
   },
   {
     question: "How does Family Sync work without a mandatory account?",
@@ -33,7 +33,7 @@ export function JsonLd() {
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
-    name: "FODDO",
+    name: "Foddo",
     operatingSystem: "Android, iOS",
     applicationCategory: "ShoppingApplication, ProductivityApplication",
     offers: {
@@ -81,7 +81,7 @@ export function JsonLd() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "FODDO by iTechills",
+    name: "Foddo by iTechills",
     url: baseUrl,
   };
 

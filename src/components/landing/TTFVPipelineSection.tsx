@@ -57,7 +57,7 @@ export function TTFVPipelineSection() {
 
           <Reveal direction="up" delay={0.2}>
             <p className="mt-5 text-base text-muted-foreground sm:text-lg leading-relaxed">
-              Most shopping apps make you register with email, confirm passwords, and fill out surveys before you can write a single item. FODDO eliminates every barrier so you can shop immediately.
+              Most shopping apps make you register with email, confirm passwords, and fill out surveys before you can write a single item. Foddo eliminates every barrier so you can shop immediately.
             </p>
           </Reveal>
         </div>
@@ -148,12 +148,12 @@ export function TTFVPipelineSection() {
             </Reveal>
 
             <Reveal direction="left" delay={0.15}>
-              {/* FODDO Local-First Standard */}
+              {/* Foddo Local-First Standard */}
               <div className="rounded-3xl border-2 border-primary bg-card p-6 sm:p-7 shadow-xl ring-1 ring-primary/20 relative overflow-hidden">
                 <div className="flex items-center justify-between border-b border-border/60 pb-3 mb-4">
                   <div className="flex items-center gap-2 text-primary font-bold text-sm">
                     <Zap className="h-4 w-4 fill-primary" />
-                    <span>FODDO Local-First Standard</span>
+                    <span>Foddo Local-First Standard</span>
                   </div>
                   <span className="rounded-full bg-primary-muted px-3 py-1 text-xs font-extrabold text-primary">
                     &lt; 3 Seconds Total
@@ -189,7 +189,7 @@ export function TTFVPipelineSection() {
                 <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
                   <Image
                     src="/images/new-bazar.png"
-                    alt="FODDO - Create a Bazar List in Seconds with Smart Reminders"
+                    alt="Foddo - Create a Bazar List in Seconds with Smart Reminders"
                     fill
                     sizes="(max-width: 768px) 100vw, 380px"
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"

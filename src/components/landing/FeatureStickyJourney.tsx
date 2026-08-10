@@ -26,7 +26,7 @@ export function FeatureStickyJourney() {
 
           <Reveal direction="up" delay={0.2}>
             <p className="mt-5 text-base text-muted-foreground sm:text-lg leading-relaxed">
-              Grocery shopping while walking requires ergonomic focus, instant progress visibility, and zero cognitive clutter. Explore how FODDO transforms routine grocery trips into satisfying accomplishments.
+              Grocery shopping while walking requires ergonomic focus, instant progress visibility, and zero cognitive clutter. Explore how Foddo transforms routine grocery trips into satisfying accomplishments.
             </p>
           </Reveal>
         </div>
@@ -107,7 +107,7 @@ export function FeatureStickyJourney() {
                   <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
                       src="/images/bazar-mode.png"
-                      alt="FODDO Bazar Mode - Shop Smart with Live Progress and Quick Add"
+                      alt="Foddo Bazar Mode - Shop Smart with Live Progress and Quick Add"
                       fill
                       sizes="(max-width: 768px) 100vw, 400px"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
@@ -129,7 +129,7 @@ export function FeatureStickyJourney() {
                   <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
                       src="/images/lists.png"
-                      alt="FODDO - All Your Lists Always Organized with Smart Categories"
+                      alt="Foddo - All Your Lists Always Organized with Smart Categories"
                       fill
                       sizes="(max-width: 768px) 100vw, 400px"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"

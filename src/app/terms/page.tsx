@@ -3,18 +3,18 @@ import { LegalDocLayout, LegalSection } from "@/components/legal/LegalDocLayout"
 import { FileText, ShieldAlert, Mail, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | FODDO Local-First Smart Grocery List",
+  title: "Terms of Service | Foddo Local-First Smart Grocery List",
   description:
-    "FODDO Terms of Service outlining licensing terms, offline operation responsibilities, local data ownership, and user agreements.",
+    "Foddo Terms of Service outlining licensing terms, offline operation responsibilities, local data ownership, and user agreements.",
   alternates: {
     canonical: "https://foddo.itechills.com/terms",
   },
   openGraph: {
-    title: "Terms of Service | FODDO Local-First Smart Grocery List",
+    title: "Terms of Service | Foddo Local-First Smart Grocery List",
     description:
-      "Review FODDO's Terms of Service: offline operation responsibilities, local data ownership, and licensing terms.",
+      "Review Foddo's Terms of Service: offline operation responsibilities, local data ownership, and licensing terms.",
     url: "https://foddo.itechills.com/terms",
-    siteName: "FODDO by iTechills",
+    siteName: "Foddo by iTechills",
   },
 };
 
@@ -32,7 +32,7 @@ export default function TermsPage() {
   return (
     <LegalDocLayout
       title="Terms of Service"
-      subtitle="Please review these Terms of Service governing your download, access, and use of the FODDO smart grocery application and services."
+      subtitle="Please review these Terms of Service governing your download, access, and use of the Foddo smart grocery application and services."
       lastUpdated="August 9, 2026"
       sections={sections}
     >
@@ -43,7 +43,7 @@ export default function TermsPage() {
             1. Acceptance of Terms
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            By downloading, installing, or using the <strong>FODDO</strong> mobile application or website, you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree to these Terms, please do not use the software.
+            By downloading, installing, or using the <strong>Foddo</strong> mobile application or website, you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree to these Terms, please do not use the software.
           </p>
         </section>
 
@@ -53,7 +53,7 @@ export default function TermsPage() {
             2. Software License & Permitted Use
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            FODDO grants you a personal, non-exclusive, non-transferable, revocable license to use the application for your personal, non-commercial grocery and shopping list management in accordance with these Terms.
+            Foddo grants you a personal, non-exclusive, non-transferable, revocable license to use the application for your personal, non-commercial grocery and shopping list management in accordance with these Terms.
           </p>
           <div className="rounded-xl border border-border bg-surface p-4 text-xs space-y-2">
             <div className="flex items-center gap-2 font-bold text-primary">
@@ -61,7 +61,7 @@ export default function TermsPage() {
               <span>You Are Permitted To:</span>
             </div>
             <ul className="list-disc pl-5 text-muted-foreground space-y-1">
-              <li>Use FODDO across your personal mobile devices.</li>
+              <li>Use Foddo across your personal mobile devices.</li>
               <li>Create, edit, organize, and export shopping lists.</li>
               <li>Share lists locally or via supported family sync mechanisms.</li>
             </ul>
@@ -74,7 +74,7 @@ export default function TermsPage() {
             3. Offline Operation & Data Ownership
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            FODDO operates under a <strong>local-first data architecture</strong>. All shopping list data is created and saved directly on your local device. Because FODDO does not mandate cloud server account backups:
+            Foddo operates under a <strong>local-first data architecture</strong>. All shopping list data is created and saved directly on your local device. Because Foddo does not mandate cloud server account backups:
           </p>
           <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1.5">
             <li><strong>Device Security:</strong> You are responsible for protecting your device against unauthorized physical access.</li>
@@ -88,7 +88,7 @@ export default function TermsPage() {
             4. Intellectual Property Rights
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            All rights, title, and interest in and to FODDO—including the app design, branding, logo assets, UI layouts, Bazar Mode concepts, source code, and website content—are owned by FODDO and protected by applicable copyright and intellectual property laws.
+            All rights, title, and interest in and to Foddo—including the app design, branding, logo assets, UI layouts, Bazar Mode concepts, source code, and website content—are owned by Foddo and protected by applicable copyright and intellectual property laws.
           </p>
         </section>
 
@@ -103,7 +103,7 @@ export default function TermsPage() {
               <span>&quot;As Is&quot; Software Warranty Disclaimer</span>
             </div>
             <p className="leading-relaxed">
-              FODDO is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis without warranties of any kind, whether express or implied, including fitness for a particular purpose or error-free operation.
+              Foddo is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis without warranties of any kind, whether express or implied, including fitness for a particular purpose or error-free operation.
             </p>
           </div>
         </section>
@@ -114,7 +114,7 @@ export default function TermsPage() {
             6. Limitation of Liability
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            To the maximum extent permitted by applicable law, in no event shall FODDO or its developers be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the application.
+            To the maximum extent permitted by applicable law, in no event shall Foddo or its developers be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the application.
           </p>
         </section>
 

@@ -19,12 +19,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://foddo.itechills.com"),
-  title: "FODDO — The Smart, Local-First Grocery & Shopping List App | Sub-3s Speed",
+  title: "Foddo — The Smart, Local-First Grocery & Shopping List App | Sub-3s Speed",
   description:
-    "FODDO is the smart, privacy-first grocery shopping list app. Designed for sub-3-second speed, 100% on-device offline storage, Bazar Mode goal gradient tracking, and real-time family sync with zero sign-in walls.",
-  applicationName: "FODDO",
+    "Foddo is the smart, privacy-first grocery shopping list app. Designed for sub-3-second speed, 100% on-device offline storage, Bazar Mode goal gradient tracking, and real-time family sync with zero sign-in walls.",
+  applicationName: "Foddo",
   keywords: [
-    "FODDO",
+    "Foddo",
     "Foddo App",
     "Foddo Grocery List",
     "Foddo Shopping List",
@@ -55,17 +55,17 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   openGraph: {
-    title: "FODDO — The Smart, Local-First Grocery & Shopping List App",
+    title: "Foddo — The Smart, Local-First Grocery & Shopping List App",
     description:
       "Instant 3-second grocery list manager with 100% on-device local storage, Bazar Mode goal tracking, and zero account gates.",
     url: "https://foddo.itechills.com",
-    siteName: "FODDO by iTechills",
+    siteName: "Foddo by iTechills",
     images: [
       {
         url: "/images/overview.png",
         width: 1200,
         height: 630,
-        alt: "FODDO App Overview — 8-Screen Ecosystem",
+        alt: "Foddo App Overview — 8-Screen Ecosystem",
       },
     ],
     locale: "en_US",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@itechills",
     creator: "@itechills",
-    title: "FODDO — The Smart, Local-First Grocery & Shopping List App",
+    title: "Foddo — The Smart, Local-First Grocery & Shopping List App",
     description:
       "Instant 3-second grocery list manager with 100% on-device local storage and zero sign-in requirements.",
     images: ["/images/overview.png"],

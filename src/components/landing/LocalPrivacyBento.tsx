@@ -26,7 +26,7 @@ export function LocalPrivacyBento() {
 
           <Reveal direction="up" delay={0.2}>
             <p className="mt-5 text-base text-muted-foreground sm:text-lg leading-relaxed">
-              FODDO is architected from the ground up as a local-first application. We do not sell your grocery habits, lock your data behind central cloud walls, or force mandatory account creation.
+              Foddo is architected from the ground up as a local-first application. We do not sell your grocery habits, lock your data behind central cloud walls, or force mandatory account creation.
             </p>
           </Reveal>
         </div>
@@ -54,7 +54,7 @@ export function LocalPrivacyBento() {
                   <div className="relative aspect-[1024/1536] w-full bg-surface">
                     <Image
                       src="/images/settings.png"
-                      alt="FODDO App Settings - Local Backup, Theme, Language, Privacy"
+                      alt="Foddo App Settings - Local Backup, Theme, Language, Privacy"
                       fill
                       sizes="(max-width: 768px) 100vw, 360px"
                       className="object-cover"
@@ -86,7 +86,7 @@ export function LocalPrivacyBento() {
                   <div className="relative aspect-[1024/1536] w-full bg-surface">
                     <Image
                       src="/images/smart-shopping-breakdown.png"
-                      alt="FODDO - Everything You Need For Smarter Shopping Feature Map"
+                      alt="Foddo - Everything You Need For Smarter Shopping Feature Map"
                       fill
                       sizes="(max-width: 768px) 100vw, 360px"
                       className="object-cover"

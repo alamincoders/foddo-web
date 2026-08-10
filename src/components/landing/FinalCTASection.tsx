@@ -1,7 +1,7 @@
 "use client";
 
+import { ArrowDownToLine, Heart } from "lucide-react";
 import Image from "next/image";
-import { ArrowDownToLine, Sparkles, ShieldCheck, Heart, Zap, WifiOff } from "lucide-react";
 import { Reveal } from "./motion/Reveal";
 
 export function FinalCTASection() {
@@ -44,7 +44,7 @@ export function FinalCTASection() {
                   className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-2xl bg-primary px-8 py-4 text-base font-bold text-white shadow-xl shadow-primary/30 transition-all duration-200 hover:bg-primary/95 hover:shadow-2xl hover:shadow-primary/40 hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <ArrowDownToLine className="h-5 w-5 transition-transform group-hover:translate-y-0.5" />
-                  <span>Get FODDO on Google Play</span>
+                  <span>Get Foddo on Google Play</span>
                 </a>
 
                 <a
@@ -85,7 +85,7 @@ export function FinalCTASection() {
                   <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
                       src="/images/cta.png"
-                      alt="FODDO - Never Forget Another Grocery Item CTA"
+                      alt="Foddo - Never Forget Another Grocery Item CTA"
                       fill
                       sizes="(max-width: 768px) 100vw, 400px"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"

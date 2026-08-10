@@ -1,9 +1,9 @@
 "use client";
 
+import { CheckCircle2, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
-import { Users, Sparkles, CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
 import { Reveal } from "./motion/Reveal";
 
 const TABS = [
@@ -13,7 +13,7 @@ const TABS = [
     tagline: "One List. Everyone Stays in Sync.",
     description: "Whether you're at home or in the market, every change is shared instantly across your entire household. Add, edit, or check off items with live member avatars.",
     image: "/images/family-explaination.png",
-    alt: "FODDO Family Sync - One List Everyone Stays In Sync",
+    alt: "Foddo Family Sync - One List Everyone Stays In Sync",
     bullets: [
       "Real-time instant item checks with member avatars (Mom, Dad, Sister)",
       "100% offline-resilient sync: updates propagate automatically when connected",
@@ -26,7 +26,7 @@ const TABS = [
     tagline: "Shop Together, From Anywhere",
     description: "Dad is at the market checking off tomatoes while Mom adds milk from home. Experience zero duplicate purchases and zero forgotten items.",
     image: "/images/family-bazar.png",
-    alt: "FODDO Live Family Bazar - Shop Together From Anywhere",
+    alt: "Foddo Live Family Bazar - Shop Together From Anywhere",
     bullets: [
       "Live status indicators: 'Dad At Market' and 'Sister At Home'",
       "Instant push notifications when urgent groceries are added",
@@ -39,7 +39,7 @@ const TABS = [
     tagline: "Invite Anyone with a Simple Code",
     description: "No tedious email invites or complicated account configurations. Generate a simple 6-character household code and share it with family in seconds.",
     image: "/images/family-joining-process.png",
-    alt: "FODDO Household Invite Code Process",
+    alt: "Foddo Household Invite Code Process",
     bullets: [
       "Simple 1-2-3 join flow: Create → Share Code → Start Shopping Together",
       "Private & protected: Only authorized members with code can access lists",
@@ -123,13 +123,9 @@ export function FamilySyncSection() {
                     <span>{activeTab.label}</span>
                   </div>
 
-                  <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2]">
-                    {activeTab.tagline}
-                  </h3>
+                  <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2]">{activeTab.tagline}</h3>
 
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    {activeTab.description}
-                  </p>
+                  <p className="text-base text-muted-foreground leading-relaxed">{activeTab.description}</p>
 
                   <ul className="space-y-3.5 text-sm text-foreground pt-2">
                     {activeTab.bullets.map((bullet, index) => (

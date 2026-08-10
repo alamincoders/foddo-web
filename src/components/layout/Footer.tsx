@@ -16,7 +16,7 @@ export function Footer() {
               <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-primary shadow-sm shadow-primary/25 transition-transform duration-200 group-hover:scale-105">
                 <Image
                   src="/icon.png"
-                  alt="FODDO Logo"
+                  alt="Foddo Logo"
                   width={40}
                   height={40}
                   className="object-cover"
@@ -24,7 +24,7 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-extrabold tracking-tight text-foreground font-sans">
-                  FODDO
+                  Foddo
                 </span>
                 <span className="text-[10px] font-bold tracking-wider text-primary uppercase">
                   by iTechills
@@ -149,7 +149,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-8 flex flex-col items-center justify-between gap-4 sm:flex-row text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} FODDO by <a href="https://itechills.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-primary transition-colors">iTechills</a>. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Foddo by <a href="https://itechills.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-primary transition-colors">iTechills</a>. All rights reserved.</p>
           <p className="flex items-center gap-1">
             Built with precision for effortless, private grocery shopping.
           </p>

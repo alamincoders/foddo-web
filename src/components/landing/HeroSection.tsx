@@ -140,7 +140,7 @@ export function HeroSection() {
                   <div className="relative aspect-[941/1672] w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
                       src="/images/empty-screen.png"
-                      alt="FODDO Smart Grocery App - Never Forget Your Grocery List"
+                      alt="Foddo Smart Grocery App - Never Forget Your Grocery List"
                       fill
                       sizes="(max-width: 768px) 100vw, 400px"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"

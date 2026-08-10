@@ -3,18 +3,18 @@ import { LegalDocLayout, LegalSection } from "@/components/legal/LegalDocLayout"
 import { ShieldCheck, HardDrive, Lock, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | FODDO Local-First Smart Grocery List",
+  title: "Privacy Policy | Foddo Local-First Smart Grocery List",
   description:
-    "FODDO Privacy Policy detailing local-first data persistence, zero mandatory sign-in, optional demographic policy, and data sovereignty guarantees.",
+    "Foddo Privacy Policy detailing local-first data persistence, zero mandatory sign-in, optional demographic policy, and data sovereignty guarantees.",
   alternates: {
     canonical: "https://foddo.itechills.com/privacy",
   },
   openGraph: {
-    title: "Privacy Policy | FODDO Local-First Smart Grocery List",
+    title: "Privacy Policy | Foddo Local-First Smart Grocery List",
     description:
-      "Understand FODDO's local-first privacy guarantees: 100% on-device storage, zero mandatory sign-in, and zero tracking.",
+      "Understand Foddo's local-first privacy guarantees: 100% on-device storage, zero mandatory sign-in, and zero tracking.",
     url: "https://foddo.itechills.com/privacy",
-    siteName: "FODDO by iTechills",
+    siteName: "Foddo by iTechills",
   },
 };
 
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
   return (
     <LegalDocLayout
       title="Privacy Policy"
-      subtitle="FODDO is built local-first. We prioritize your data privacy by persisting your shopping lists locally on your device with zero cloud tracking."
+      subtitle="Foddo is built local-first. We prioritize your data privacy by persisting your shopping lists locally on your device with zero cloud tracking."
       lastUpdated="August 9, 2026"
       sections={sections}
     >
@@ -43,10 +43,10 @@ export default function PrivacyPage() {
             1. Overview & Local-First Philosophy
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            At <strong>FODDO</strong>, we believe your personal shopping habits, grocery lists, and family budgets are your private business. Traditional applications send every keystroke to remote cloud servers to analyze shopping behavior. FODDO takes an entirely different approach: <strong>Local-First Architecture</strong>.
+            At <strong>Foddo</strong>, we believe your personal shopping habits, grocery lists, and family budgets are your private business. Traditional applications send every keystroke to remote cloud servers to analyze shopping behavior. Foddo takes an entirely different approach: <strong>Local-First Architecture</strong>.
           </p>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            When you create shopping lists, add items, or organize aisles in FODDO, all data remains stored directly inside your device&apos;s local SQLite database. No account creation or email registration is required to use the app.
+            When you create shopping lists, add items, or organize aisles in Foddo, all data remains stored directly inside your device&apos;s local SQLite database. No account creation or email registration is required to use the app.
           </p>
         </section>
 
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
             3. Optional Demographic Data Policy
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            To provide optional smart household recommendations, FODDO may give you the option to input demographic preferences such as household size or age bracket.
+            To provide optional smart household recommendations, Foddo may give you the option to input demographic preferences such as household size or age bracket.
           </p>
           <div className="rounded-xl border border-primary/20 bg-primary-muted p-4 text-xs text-primary space-y-1">
             <span className="font-bold block">Strict Consent & Contextual Standard:</span>
@@ -101,7 +101,7 @@ export default function PrivacyPage() {
             4. Local Storage & SQLite Security
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            FODDO utilizes an embedded <strong>SQLite database</strong> managed via Drizzle ORM on native mobile platforms (Android/iOS). Data is protected by OS-level sandbox isolation, preventing other applications on your device from accessing FODDO storage.
+            Foddo utilizes an embedded <strong>SQLite database</strong> managed via Drizzle ORM on native mobile platforms (Android/iOS). Data is protected by OS-level sandbox isolation, preventing other applications on your device from accessing Foddo storage.
           </p>
           <div className="flex items-center gap-3 text-xs text-muted-foreground bg-surface p-3 rounded-lg border border-border">
             <HardDrive className="h-4 w-4 text-primary shrink-0" />
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
             5. Third-Party Services & Play Store
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            FODDO is distributed through official application marketplaces such as the <strong>Google Play Store</strong>. When downloading the application or accessing web documentation, Google Play services may collect standard anonymous crash logs and installation diagnostics in accordance with their privacy policies.
+            Foddo is distributed through official application marketplaces such as the <strong>Google Play Store</strong>. When downloading the application or accessing web documentation, Google Play services may collect standard anonymous crash logs and installation diagnostics in accordance with their privacy policies.
           </p>
         </section>
 
@@ -129,7 +129,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1.5">
             <li><strong>Clear Data:</strong> You can wipe all local databases instantly from the app Settings menu.</li>
-            <li><strong>App Uninstall:</strong> Uninstalling FODDO permanently removes all stored database files from your device.</li>
+            <li><strong>App Uninstall:</strong> Uninstalling Foddo permanently removes all stored database files from your device.</li>
             <li><strong>Data Export:</strong> You can export your shopping lists to CSV or JSON format anytime.</li>
           </ul>
         </section>
@@ -140,7 +140,7 @@ export default function PrivacyPage() {
             7. Contact Information
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            If you have questions regarding this Privacy Policy or FODDO&apos;s local-first architecture, please reach out to our privacy engineering team:
+            If you have questions regarding this Privacy Policy or Foddo&apos;s local-first architecture, please reach out to our privacy engineering team:
           </p>
           <div className="mt-2 inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-4 py-2.5 text-sm font-semibold text-foreground">
             <Mail className="h-4 w-4 text-primary" />

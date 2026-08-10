@@ -47,7 +47,7 @@ export function LegalDocLayout({
           <div className="mb-10 rounded-2xl bg-surface p-6 sm:p-10 border border-border/80 shadow-sm">
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
               <Shield className="h-4 w-4" />
-              <span>FODDO Legal Compliance</span>
+              <span>Foddo Legal Compliance</span>
             </div>
             <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
               {title}
@@ -63,7 +63,7 @@ export function LegalDocLayout({
               <span>•</span>
               <span className="flex items-center gap-1.5">
                 <FileText className="h-3.5 w-3.5 text-primary" />
-                Applies to FODDO Mobile & Web Services
+                Applies to Foddo Mobile & Web Services
               </span>
             </div>
           </div>

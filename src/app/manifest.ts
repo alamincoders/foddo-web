@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "FODDO | Local-First Smart Grocery & Shopping List",
-    short_name: "FODDO",
+    name: "Foddo | Local-First Smart Grocery & Shopping List",
+    short_name: "Foddo",
     description:
       "Instant 3-second grocery list manager with 100% on-device local storage, Bazar Mode goal tracking, and zero account gates.",
     start_url: "/",

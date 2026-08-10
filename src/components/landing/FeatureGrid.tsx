@@ -15,7 +15,7 @@ export function FeatureGrid() {
             Everything You Need For <span className="text-primary">Stress-Free</span> Shopping
           </h2>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg leading-relaxed">
-            FODDO combines ergonomic 1-handed design, supermarket aisle auto-sorting, and goal gradient motivation to streamline every trip to the store.
+            Foddo combines ergonomic 1-handed design, supermarket aisle auto-sorting, and goal gradient motivation to streamline every trip to the store.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export function FeatureGrid() {
               <div className="relative w-full max-w-[300px] sm:max-w-[340px] rounded-[36px] border-[6px] border-slate-900 bg-slate-900 shadow-2xl overflow-hidden ring-1 ring-white/10">
                 <Image
                   src="/images/bazar-mode.png"
-                  alt="FODDO Bazar Mode Screenshot"
+                  alt="Foddo Bazar Mode Screenshot"
                   width={340}
                   height={700}
                   className="w-full h-auto object-cover"
@@ -105,7 +105,7 @@ export function FeatureGrid() {
                 Organized by Store Aisles
               </h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                Never backtrack through store aisles again. FODDO automatically categorizes items into Dairy, Produce, Bakery, and Meat sections as you type.
+                Never backtrack through store aisles again. Foddo automatically categorizes items into Dairy, Produce, Bakery, and Meat sections as you type.
               </p>
             </div>
 

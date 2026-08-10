@@ -16,7 +16,7 @@ export function Navbar() {
           <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-primary shadow-sm shadow-primary/20">
             <Image
               src="/icon.png"
-              alt="FODDO Logo"
+              alt="Foddo Logo"
               width={40}
               height={40}
               className="object-cover"
@@ -25,7 +25,7 @@ export function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="text-xl font-extrabold tracking-tight text-foreground font-sans">
-              FODDO
+              Foddo
             </span>
             <span className="text-[10px] font-semibold tracking-wider text-primary uppercase">
               Local-First

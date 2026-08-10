@@ -14,7 +14,7 @@ export function TTFVSection() {
             From Launch to &quot;Milk&quot; in Under <span className="text-primary">3 Seconds</span>
           </h2>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg leading-relaxed">
-            Most grocery apps force you through sign-up walls, mandatory email verification, and onboarding surveys before you can add a single item. FODDO gets out of your way immediately.
+            Most grocery apps force you through sign-up walls, mandatory email verification, and onboarding surveys before you can add a single item. Foddo gets out of your way immediately.
           </p>
         </div>
 
@@ -68,16 +68,16 @@ export function TTFVSection() {
             </ul>
           </div>
 
-          {/* FODDO App (Instant & Local) */}
+          {/* Foddo App (Instant & Local) */}
           <div className="rounded-3xl border-2 border-primary bg-card p-6 sm:p-8 shadow-xl relative overflow-hidden ring-1 ring-primary/20">
             <div className="absolute top-0 right-0 bg-primary px-4 py-1.5 rounded-bl-2xl text-xs font-extrabold text-white uppercase tracking-wider">
-              FODDO Standard
+              Foddo Standard
             </div>
 
             <div className="flex items-center justify-between border-b border-border pb-4 mb-6">
               <div className="flex items-center gap-2 text-primary font-bold text-sm">
                 <Zap className="h-4 w-4 fill-primary" />
-                <span>FODDO Local-First</span>
+                <span>Foddo Local-First</span>
               </div>
               <span className="rounded-full bg-primary-muted px-3 py-1 text-xs font-extrabold text-primary">
                 &lt; 3 Seconds
