@@ -1,18 +1,7 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
-import { 
-  Sparkles, 
-  Languages, 
-  Zap, 
-  CheckCircle2, 
-  ArrowRight, 
-  SlidersHorizontal,
-  LayoutList,
-  ShieldCheck,
-  Cpu
-} from "lucide-react";
-import { motion } from "motion/react";
+import { CheckCircle2, Cpu, Languages, LayoutList, SlidersHorizontal, Sparkles, Zap } from "lucide-react";
+import { useMemo, useState } from "react";
 import { Reveal, StaggerContainer, StaggerItem } from "./motion/Reveal";
 
 interface ParsedResult {
@@ -48,18 +37,18 @@ function parseInputLive(input: string): ParsedResult {
 
   // Fraction words (Bangla & English)
   const fractionMap: Record<string, string> = {
-    "হাফ": "0.5",
-    "আধা": "0.5",
-    "half": "0.5",
-    "adha": "0.5",
-    "দেড়": "1.5",
-    "দেড়": "1.5",
-    "derh": "1.5",
-    "পৌনে": "0.75",
-    "সোয়া": "1.25",
-    "সোয়া": "1.25",
-    "পোয়া": "250g",
-    "পোয়া": "250g",
+    হাফ: "0.5",
+    আধা: "0.5",
+    half: "0.5",
+    adha: "0.5",
+    দেড়: "1.5",
+    দেড়: "1.5",
+    derh: "1.5",
+    পৌনে: "0.75",
+    সোয়া: "1.25",
+    সোয়া: "1.25",
+    পোয়া: "250g",
+    পোয়া: "250g",
   };
 
   for (const [word, val] of Object.entries(fractionMap)) {
@@ -73,8 +62,16 @@ function parseInputLive(input: string): ParsedResult {
 
   // Number extraction (English & Bangla digits)
   const banglaDigits: Record<string, string> = {
-    "০": "0", "১": "1", "২": "2", "৩": "3", "৪": "4",
-    "৫": "5", "৬": "6", "৭": "7", "৮": "8", "৯": "9",
+    "০": "0",
+    "১": "1",
+    "২": "2",
+    "৩": "3",
+    "৪": "4",
+    "৫": "5",
+    "৬": "6",
+    "৭": "7",
+    "৮": "8",
+    "৯": "9",
   };
 
   let normalized = "";
@@ -93,37 +90,37 @@ function parseInputLive(input: string): ParsedResult {
 
   // Units extraction (Bangla & English)
   const unitsMap: Record<string, string> = {
-    "কেজি": "kg",
-    "kg": "kg",
-    "kilo": "kg",
-    "kilogram": "kg",
-    "গ্রাম": "gm",
-    "gm": "gm",
-    "gram": "gm",
-    "g": "gm",
-    "লিটার": "Liter",
-    "liter": "Liter",
-    "litre": "Liter",
-    "l": "Liter",
-    "প্যাকেট": "Packet",
-    "packet": "Packet",
-    "packets": "Packet",
-    "pkt": "Packet",
-    "ডজন": "Dozen",
-    "dozen": "Dozen",
-    "হালি": "Hali (4 pcs)",
-    "hali": "Hali (4 pcs)",
-    "বোতল": "Bottle",
-    "bottle": "Bottle",
-    "bottles": "Bottle",
-    "বক্স": "Box",
-    "box": "Box",
-    "boxes": "Box",
-    "পিস": "Pcs",
-    "pcs": "Pcs",
-    "pc": "Pcs",
-    "টা": "Pcs",
-    "টি": "Pcs",
+    কেজি: "kg",
+    kg: "kg",
+    kilo: "kg",
+    kilogram: "kg",
+    গ্রাম: "gm",
+    gm: "gm",
+    gram: "gm",
+    g: "gm",
+    লিটার: "Liter",
+    liter: "Liter",
+    litre: "Liter",
+    l: "Liter",
+    প্যাকেট: "Packet",
+    packet: "Packet",
+    packets: "Packet",
+    pkt: "Packet",
+    ডজন: "Dozen",
+    dozen: "Dozen",
+    হালি: "Hali (4 pcs)",
+    hali: "Hali (4 pcs)",
+    বোতল: "Bottle",
+    bottle: "Bottle",
+    bottles: "Bottle",
+    বক্স: "Box",
+    box: "Box",
+    boxes: "Box",
+    পিস: "Pcs",
+    pcs: "Pcs",
+    pc: "Pcs",
+    টা: "Pcs",
+    টি: "Pcs",
   };
 
   for (const [uWord, uStandard] of Object.entries(unitsMap)) {
@@ -165,7 +162,7 @@ export function SmartInputSection() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2] text-balance">
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-tight sm:leading-[1.2] text-balance">
               Type Naturally in Any Language. <br className="hidden sm:inline" />
               <span className="text-primary mt-1 inline-block">Foddo Understands Instantly.</span>
             </h2>
@@ -173,7 +170,8 @@ export function SmartInputSection() {
 
           <Reveal direction="up" delay={0.2}>
             <p className="mt-5 text-base text-muted-foreground sm:text-lg leading-relaxed">
-              No clunky unit dropdowns, quantity dials, or distracting category dividers. Type exactly how you speak in English, বাংলা, or Romanized Banglish. Foddo automatically separates the item name, quantity, and measurement unit in a clean, distraction-free list.
+              No clunky unit dropdowns, quantity dials, or distracting category dividers. Type exactly how you speak in English, বাংলা, or Romanized Banglish. Foddo automatically separates the item
+              name, quantity, and measurement unit in a clean, distraction-free list.
             </p>
           </Reveal>
         </div>
@@ -188,12 +186,8 @@ export function SmartInputSection() {
                   <Cpu className="h-4.5 w-4.5 sm:h-5 sm:w-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-foreground text-sm sm:text-base lg:text-lg text-balance">
-                    Interactive Natural Language Parser Playground
-                  </h3>
-                  <p className="text-[11px] sm:text-xs text-muted-foreground">
-                    Type below or tap any sample phrase for instant token extraction.
-                  </p>
+                  <h3 className="font-bold text-foreground text-sm sm:text-base lg:text-lg text-balance">Interactive Natural Language Parser Playground</h3>
+                  <p className="text-[11px] sm:text-xs text-muted-foreground">Type below or tap any sample phrase for instant token extraction.</p>
                 </div>
               </div>
 
@@ -217,9 +211,7 @@ export function SmartInputSection() {
 
                   {/* Smart Input Box */}
                   <div className="relative flex items-center rounded-2xl border-2 border-primary/40 bg-surface/80 p-1.5 sm:p-2 shadow-inner focus-within:border-primary focus-within:ring-4 focus-within:ring-primary/10 transition-all">
-                    <div className="pl-2.5 pr-1.5 text-primary font-bold text-base sm:text-lg select-none">
-                      ✍️
-                    </div>
+                    <div className="pl-2.5 pr-1.5 text-primary font-bold text-base sm:text-lg select-none">✍️</div>
                     <input
                       type="text"
                       value={inputText}
@@ -241,9 +233,7 @@ export function SmartInputSection() {
 
                 {/* Quick Presets / Try It Chips */}
                 <div className="space-y-2 sm:space-y-3">
-                  <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-muted-foreground block">
-                    Quick Examples (Tap to Test):
-                  </span>
+                  <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-muted-foreground block">Quick Examples (Tap to Test):</span>
                   <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {PRESET_EXAMPLES.map((example) => {
                       const isSelected = inputText === example.text;
@@ -275,44 +265,30 @@ export function SmartInputSection() {
                       <Sparkles className="h-3.5 w-3.5" />
                       <span>Zero-Click Parsed Breakdown</span>
                     </span>
-                    <span className="text-[10px] sm:text-[11px] font-mono text-muted-foreground">
-                      &lt; 0.5ms on-device
-                    </span>
+                    <span className="text-[10px] sm:text-[11px] font-mono text-muted-foreground">&lt; 0.5ms on-device</span>
                   </div>
 
                   {/* Dynamic Extraction Cards */}
                   <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5">
                     {/* Item Name */}
                     <div className="rounded-xl border border-border/70 bg-card p-3 sm:p-4 shadow-xs">
-                      <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-muted-foreground block">
-                        Detected Item
-                      </span>
-                      <div className="mt-1 text-sm sm:text-base font-extrabold text-foreground truncate">
-                        {parsed.name}
-                      </div>
+                      <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-muted-foreground block">Detected Item</span>
+                      <div className="mt-1 text-sm sm:text-base font-extrabold text-foreground truncate">{parsed.name}</div>
                     </div>
 
                     {/* Quantity & Unit */}
                     <div className="rounded-xl border border-border/70 bg-card p-3 sm:p-4 shadow-xs">
-                      <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-muted-foreground block">
-                        Quantity & Unit
-                      </span>
+                      <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-muted-foreground block">Quantity & Unit</span>
                       <div className="mt-1 flex items-baseline gap-1.5">
-                        <span className="text-base sm:text-lg font-black text-primary font-mono">
-                          {parsed.quantity || "1"}
-                        </span>
-                        <span className="text-[11px] sm:text-xs font-bold text-foreground bg-primary-muted px-1.5 sm:px-2 py-0.5 rounded-md truncate">
-                          {parsed.unit || "Piece"}
-                        </span>
+                        <span className="text-base sm:text-lg font-black text-primary font-mono">{parsed.quantity || "1"}</span>
+                        <span className="text-[11px] sm:text-xs font-bold text-foreground bg-primary-muted px-1.5 sm:px-2 py-0.5 rounded-md truncate">{parsed.unit || "Piece"}</span>
                       </div>
                     </div>
 
                     {/* Clean Minimalist List Preview */}
                     <div className="col-span-2 rounded-xl border border-primary/25 bg-linear-to-r from-primary-muted/80 to-accent-muted/40 p-3 sm:p-4 shadow-xs">
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-primary block">
-                          Clean Flat List Preview
-                        </span>
+                        <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-primary block">Clean Flat List Preview</span>
                         <span className="text-[10px] sm:text-xs font-bold text-primary">Saved</span>
                       </div>
                       <div className="flex items-center justify-between gap-2 mt-1.5 bg-card rounded-lg p-2.5 sm:p-3 border border-border/60">
@@ -346,9 +322,7 @@ export function SmartInputSection() {
                 <Languages className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
               <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">True Multilingual NLP</h4>
-              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
-                English, Bangla script, Banglish, & mixed numerals without setup.
-              </p>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">English, Bangla script, Banglish, & mixed numerals without setup.</p>
             </div>
           </StaggerItem>
 
@@ -370,9 +344,7 @@ export function SmartInputSection() {
                 <LayoutList className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
               <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">Zero-Clutter Flat List</h4>
-              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
-                No complex folders or distracting aisle dividers. Pure speed.
-              </p>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">No complex folders or distracting aisle dividers. Pure speed.</p>
             </div>
           </StaggerItem>
 
@@ -382,9 +354,7 @@ export function SmartInputSection() {
                 <Zap className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
               <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">Sub-Millisecond Speed</h4>
-              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
-                100% on-device parser algorithms with zero server lag.
-              </p>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">100% on-device parser algorithms with zero server lag.</p>
             </div>
           </StaggerItem>
         </StaggerContainer>

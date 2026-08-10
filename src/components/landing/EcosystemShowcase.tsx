@@ -53,7 +53,7 @@ export function EcosystemShowcase() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.25] lg:leading-[1.2] text-balance">
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-tight sm:leading-tight lg:leading-[1.2] text-balance">
               Everything in One Place. <br className="hidden sm:inline" />
               <span className="text-primary mt-1 inline-block">Plan. Shop. Done.</span>
             </h2>
@@ -81,7 +81,7 @@ export function EcosystemShowcase() {
             <div className="absolute -inset-0.5 rounded-3xl bg-linear-to-b from-primary/20 via-transparent to-accent/10 -z-10 opacity-70 blur-xs" />
 
             {/* Image Container with native ~3:2 ratio */}
-            <div className="relative aspect-[1535/1024] w-full overflow-hidden rounded-2xl bg-surface">
+            <div className="relative aspect-1535/1024 w-full overflow-hidden rounded-2xl bg-surface">
               <Image
                 src="/images/overview.png"
                 alt="Foddo 8-Screen Application Ecosystem - Plan, Shop, Done"
@@ -121,7 +121,7 @@ export function EcosystemShowcase() {
             <div className="absolute -inset-0.5 rounded-3xl bg-linear-to-b from-primary/20 via-transparent to-accent/10 -z-10 opacity-70 blur-xs" />
 
             {/* Sharp, Full 2:3 High-Res Phone Mockup */}
-            <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
+            <div className="relative aspect-1024/1536 w-full overflow-hidden rounded-2xl bg-surface">
               <Image
                 src="/images/bazar-mode.png"
                 alt="Foddo Mobile App UI Showcase"

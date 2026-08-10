@@ -1,9 +1,8 @@
 "use client";
 
+import { Check, CheckCircle2, Clock, Sparkles, X, Zap } from "lucide-react";
 import Image from "next/image";
-import { Zap, Clock, ShieldCheck, Check, X, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
-import { motion } from "motion/react";
-import { Reveal, StaggerContainer, StaggerItem } from "./motion/Reveal";
+import { Reveal } from "./motion/Reveal";
 
 const PIPELINE_STEPS = [
   {
@@ -50,7 +49,7 @@ export function TTFVPipelineSection() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2] text-balance">
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-tight sm:leading-[1.2] text-balance">
               From Launch to &quot;Milk&quot; in Under <span className="text-primary">3 Seconds</span>
             </h2>
           </Reveal>
@@ -71,9 +70,7 @@ export function TTFVPipelineSection() {
                 <Sparkles className="h-4 w-4 text-primary shrink-0" />
                 <span>The Sub-3-Second Execution Journey</span>
               </div>
-              <span className="self-start sm:self-auto rounded-full bg-primary-muted px-3 py-1 text-xs font-extrabold text-primary">
-                Total Elapsed: &lt; 3.0s
-              </span>
+              <span className="self-start sm:self-auto rounded-full bg-primary-muted px-3 py-1 text-xs font-extrabold text-primary">Total Elapsed: &lt; 3.0s</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6 relative">
@@ -86,16 +83,10 @@ export function TTFVPipelineSection() {
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl">{item.icon}</span>
-                      <span className="rounded-lg bg-primary-muted px-2.5 py-1 text-xs font-mono font-bold text-primary">
-                        {item.time}
-                      </span>
+                      <span className="rounded-lg bg-primary-muted px-2.5 py-1 text-xs font-mono font-bold text-primary">{item.time}</span>
                     </div>
-                    <h3 className="font-bold text-foreground text-sm xl:text-base group-hover:text-primary transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
+                    <h3 className="font-bold text-foreground text-sm xl:text-base group-hover:text-primary transition-colors">{item.title}</h3>
+                    <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
 
                   {/* Step indicator footer */}
@@ -121,27 +112,33 @@ export function TTFVPipelineSection() {
                     <Clock className="h-4 w-4 shrink-0" />
                     <span>Other Grocery & Cloud Apps</span>
                   </div>
-                  <span className="self-start sm:self-auto rounded-full bg-red-100 dark:bg-red-900/40 px-3 py-1 text-xs font-bold text-red-600 dark:text-red-400">
-                    Avg. ~120 Seconds
-                  </span>
+                  <span className="self-start sm:self-auto rounded-full bg-red-100 dark:bg-red-900/40 px-3 py-1 text-xs font-bold text-red-600 dark:text-red-400">Avg. ~120 Seconds</span>
                 </div>
 
                 <ul className="space-y-3 text-xs sm:text-sm text-muted-foreground">
                   <li className="flex items-start gap-2.5">
                     <X className="h-4 w-4 text-red-500 shrink-0 mt-0.5" />
-                    <span><strong className="text-foreground">Forced Sign-In Wall:</strong> Email validation, OAuth redirects, and password setups.</span>
+                    <span>
+                      <strong className="text-foreground">Forced Sign-In Wall:</strong> Email validation, OAuth redirects, and password setups.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <X className="h-4 w-4 text-red-500 shrink-0 mt-0.5" />
-                    <span><strong className="text-foreground">Demographic Surveys:</strong> Mandatory questions on household income & zip codes.</span>
+                    <span>
+                      <strong className="text-foreground">Demographic Surveys:</strong> Mandatory questions on household income & zip codes.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <X className="h-4 w-4 text-red-500 shrink-0 mt-0.5" />
-                    <span><strong className="text-foreground">Cloud Network Latency:</strong> Remote spinner wait every time an item is saved.</span>
+                    <span>
+                      <strong className="text-foreground">Cloud Network Latency:</strong> Remote spinner wait every time an item is saved.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <X className="h-4 w-4 text-red-500 shrink-0 mt-0.5" />
-                    <span><strong className="text-foreground">No Offline Mode:</strong> Freezes inside basement supermarket aisles.</span>
+                    <span>
+                      <strong className="text-foreground">No Offline Mode:</strong> Freezes inside basement supermarket aisles.
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -155,27 +152,33 @@ export function TTFVPipelineSection() {
                     <Zap className="h-4 w-4 fill-primary shrink-0" />
                     <span>Foddo Local-First Standard</span>
                   </div>
-                  <span className="self-start sm:self-auto rounded-full bg-primary-muted px-3 py-1 text-xs font-extrabold text-primary">
-                    &lt; 3 Seconds Total
-                  </span>
+                  <span className="self-start sm:self-auto rounded-full bg-primary-muted px-3 py-1 text-xs font-extrabold text-primary">&lt; 3 Seconds Total</span>
                 </div>
 
                 <ul className="space-y-3 text-xs sm:text-sm text-foreground">
                   <li className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                    <span><strong className="text-primary">Instant Active List:</strong> Opens directly to grocery input. Zero loading screens.</span>
+                    <span>
+                      <strong className="text-primary">Instant Active List:</strong> Opens directly to grocery input. Zero loading screens.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                    <span><strong className="text-primary">Zero Account Gates:</strong> No sign-in, no passwords, no forced data collection.</span>
+                    <span>
+                      <strong className="text-primary">Zero Account Gates:</strong> No sign-in, no passwords, no forced data collection.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                    <span><strong className="text-primary">Instant On-Device Storage:</strong> Sub-millisecond reads/writes right on your phone.</span>
+                    <span>
+                      <strong className="text-primary">Instant On-Device Storage:</strong> Sub-millisecond reads/writes right on your phone.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                    <span><strong className="text-primary">100% Offline Always:</strong> Works seamlessly everywhere with zero connectivity.</span>
+                    <span>
+                      <strong className="text-primary">100% Offline Always:</strong> Works seamlessly everywhere with zero connectivity.
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -184,9 +187,9 @@ export function TTFVPipelineSection() {
 
           {/* Right Column: Order 1 on Mobile (Image First), Order 2 on Desktop */}
           <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
-            <Reveal direction="right" delay={0.2} className="relative w-full max-w-[320px] sm:max-w-[380px]">
+            <Reveal direction="right" delay={0.2} className="relative w-full max-w-[320px] sm:max-w-95">
               <div className="group relative rounded-3xl border border-black/8 dark:border-white/12 bg-card p-2.5 shadow-soft-2xl transition-all duration-300 hover:shadow-2xl">
-                <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
+                <div className="relative aspect-1024/1536 w-full overflow-hidden rounded-2xl bg-surface">
                   <Image
                     src="/images/new-bazar.png"
                     alt="Foddo - Create a Bazar List in Seconds with Smart Reminders"

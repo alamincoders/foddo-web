@@ -64,7 +64,7 @@ export function FamilySyncSection() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2]">
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-tight sm:leading-[1.2]">
               One Household Grocery List. <br className="hidden sm:inline" />
               <span className="text-primary mt-1 inline-block">Always in Sync.</span>
             </h2>
@@ -123,7 +123,7 @@ export function FamilySyncSection() {
                     <span>{activeTab.label}</span>
                   </div>
 
-                  <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2] text-balance">
+                  <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-tight sm:leading-[1.2] text-balance">
                     {activeTab.tagline}
                   </h3>
 
@@ -155,7 +155,7 @@ export function FamilySyncSection() {
                 <span className="text-accent font-bold">🏠 Mom (At Home)</span>
               </div>
 
-              <div className="relative w-full max-w-[300px] sm:max-w-[360px] xl:max-w-[400px]">
+              <div className="relative w-full max-w-75 sm:max-w-90 xl:max-w-100">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeTab.id}
@@ -165,7 +165,7 @@ export function FamilySyncSection() {
                     transition={{ duration: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
                     className="group relative rounded-3xl border border-black/8 dark:border-white/12 bg-card p-2.5 shadow-soft-2xl"
                   >
-                    <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
+                    <div className="relative aspect-1024/1536 w-full overflow-hidden rounded-2xl bg-surface">
                       <Image
                         src={activeTab.image}
                         alt={activeTab.alt}

@@ -23,7 +23,7 @@ export function FinalCTASection() {
               </Reveal>
 
               <Reveal direction="up" delay={0.1}>
-                <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-[38px] xl:text-5xl leading-[1.25] sm:leading-[1.2] text-balance">
+                <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-[38px] xl:text-5xl leading-tight sm:leading-[1.2] text-balance">
                   Ready to Upgrade Your <br className="hidden sm:inline" />
                   <span className="text-primary mt-1 inline-block">Grocery Shopping?</span>
                 </h2>
@@ -80,9 +80,9 @@ export function FinalCTASection() {
 
             {/* Poster Column: Order 1 on Mobile (Image First), Order 2 on Desktop */}
             <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
-              <Reveal direction="right" delay={0.2} className="relative w-full max-w-[300px] sm:max-w-[360px] xl:max-w-[400px]">
+              <Reveal direction="right" delay={0.2} className="relative w-full max-w-75 sm:max-w-90 xl:max-w-100">
                 <div className="group relative rounded-3xl border border-black/8 dark:border-white/12 bg-card p-2.5 shadow-soft-2xl transition-all duration-300 hover:shadow-2xl">
-                  <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
+                  <div className="relative aspect-1024/1536 w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
                       src="/images/cta.png"
                       alt="Foddo - Never Forget Another Grocery Item CTA"

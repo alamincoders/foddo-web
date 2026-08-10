@@ -51,7 +51,7 @@ export function FeatureGrid() {
             </div>
 
             <div className="lg:col-span-6 flex justify-center">
-              <div className="relative w-full max-w-[300px] sm:max-w-[340px] rounded-[36px] border-[6px] border-slate-900 bg-slate-900 shadow-2xl overflow-hidden ring-1 ring-white/10">
+              <div className="relative w-full max-w-75 sm:max-w-85 rounded-[36px] border-[6px] border-slate-900 bg-slate-900 shadow-2xl overflow-hidden ring-1 ring-white/10">
                 <Image
                   src="/images/bazar-mode.png"
                   alt="Foddo Bazar Mode Screenshot"
@@ -82,7 +82,7 @@ export function FeatureGrid() {
             </div>
 
             <div className="mt-8 flex justify-center">
-              <div className="relative w-full max-w-[260px] sm:max-w-[280px] rounded-[28px] border-[5px] border-slate-900 bg-slate-900 shadow-lg overflow-hidden">
+              <div className="relative w-full max-w-65 sm:max-w-70 rounded-[28px] border-[5px] border-slate-900 bg-slate-900 shadow-lg overflow-hidden">
                 <Image
                   src="/images/family-bazar.png"
                   alt="Family Bazar Sharing Screenshot"
@@ -110,7 +110,7 @@ export function FeatureGrid() {
             </div>
 
             <div className="mt-8 flex justify-center">
-              <div className="relative w-full max-w-[260px] sm:max-w-[280px] rounded-[28px] border-[5px] border-slate-900 bg-slate-900 shadow-lg overflow-hidden">
+              <div className="relative w-full max-w-65 sm:max-w-70 rounded-[28px] border-[5px] border-slate-900 bg-slate-900 shadow-lg overflow-hidden">
                 <Image
                   src="/images/smart-shopping-breakdown.png"
                   alt="Smart Shopping Breakdown Screenshot"

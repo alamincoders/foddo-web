@@ -1,7 +1,7 @@
 "use client";
 
+import { DownloadCloud, HardDrive, Layers, Lock, ShieldCheck, UserX } from "lucide-react";
 import Image from "next/image";
-import { ShieldCheck, HardDrive, UserX, Lock, DownloadCloud, Sparkles, Layers } from "lucide-react";
 import { Reveal, StaggerContainer, StaggerItem } from "./motion/Reveal";
 
 export function LocalPrivacyBento() {
@@ -18,7 +18,7 @@ export function LocalPrivacyBento() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2] text-balance">
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-tight sm:leading-[1.2] text-balance">
               Your Grocery Lists Stay <br className="hidden sm:inline" />
               <span className="text-primary mt-1 inline-block">100% Private & In Your Control</span>
             </h2>
@@ -41,24 +41,16 @@ export function LocalPrivacyBento() {
                   <HardDrive className="h-4 w-4" />
                   <span>Device-Level Storage</span>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">
-                  Your Data, Your Way, Always Safe
-                </h3>
+                <h3 className="text-2xl font-bold text-foreground">Your Data, Your Way, Always Safe</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   Export offline JSON backups to local storage, toggle haptic feedback, switch light/dark themes, and choose between English and Bangla anytime.
                 </p>
               </div>
 
               <div className="flex justify-center pt-2">
-                <div className="relative w-full max-w-[320px] sm:max-w-[360px] rounded-2xl overflow-hidden border border-border/70 shadow-md">
-                  <div className="relative aspect-[1024/1536] w-full bg-surface">
-                    <Image
-                      src="/images/settings.png"
-                      alt="Foddo App Settings - Local Backup, Theme, Language, Privacy"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 360px"
-                      className="object-cover"
-                    />
+                <div className="relative w-full max-w-[320px] sm:max-w-90 rounded-2xl overflow-hidden border border-border/70 shadow-md">
+                  <div className="relative aspect-1024/1536 w-full bg-surface">
+                    <Image src="/images/settings.png" alt="Foddo App Settings - Local Backup, Theme, Language, Privacy" fill sizes="(max-width: 768px) 100vw, 360px" className="object-cover" />
                   </div>
                 </div>
               </div>
@@ -73,17 +65,15 @@ export function LocalPrivacyBento() {
                   <Layers className="h-4 w-4" />
                   <span>8 Core Features Hub</span>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">
-                  Everything You Need For Smarter Shopping
-                </h3>
+                <h3 className="text-2xl font-bold text-foreground">Everything You Need For Smarter Shopping</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   Quick Add, Multilingual Smart Parsing, Family Mode, Re-Shop, Spending History, Reminders, and Dark Mode designed for everyday simplicity.
                 </p>
               </div>
 
               <div className="flex justify-center pt-2">
-                <div className="relative w-full max-w-[320px] sm:max-w-[360px] rounded-2xl overflow-hidden border border-border/70 shadow-md">
-                  <div className="relative aspect-[1024/1536] w-full bg-surface">
+                <div className="relative w-full max-w-[320px] sm:max-w-90 rounded-2xl overflow-hidden border border-border/70 shadow-md">
+                  <div className="relative aspect-1024/1536 w-full bg-surface">
                     <Image
                       src="/images/smart-shopping-breakdown.png"
                       alt="Foddo - Everything You Need For Smarter Shopping Feature Map"
@@ -106,9 +96,7 @@ export function LocalPrivacyBento() {
                 <HardDrive className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
               <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">100% Local Storage</h4>
-              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
-                All lists and prices written directly to your phone. Zero cloud tracking.
-              </p>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">All lists and prices written directly to your phone. Zero cloud tracking.</p>
             </div>
           </StaggerItem>
 
@@ -118,9 +106,7 @@ export function LocalPrivacyBento() {
                 <UserX className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
               <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">Zero Account Gate</h4>
-              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
-                No sign-in, email validation, or phone OTP required for unlimited lists.
-              </p>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">No sign-in, email validation, or phone OTP required for unlimited lists.</p>
             </div>
           </StaggerItem>
 
@@ -130,9 +116,7 @@ export function LocalPrivacyBento() {
                 <Lock className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
               <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">Optional Demographics</h4>
-              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
-                Gender/age are 100% optional—used only for smart household tips.
-              </p>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">Gender/age are 100% optional—used only for smart household tips.</p>
             </div>
           </StaggerItem>
 
@@ -142,9 +126,7 @@ export function LocalPrivacyBento() {
                 <DownloadCloud className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
               <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">JSON Export & Backup</h4>
-              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
-                You own your data. Export, backup, or restore shopping history anytime.
-              </p>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">You own your data. Export, backup, or restore shopping history anytime.</p>
             </div>
           </StaggerItem>
         </StaggerContainer>

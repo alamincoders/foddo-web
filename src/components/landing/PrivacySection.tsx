@@ -63,7 +63,7 @@ export function PrivacySection() {
         </div>
 
         {/* Play Store Download Callout Card */}
-        <div className="mt-20 rounded-3xl bg-gradient-to-r from-primary via-primary-soft to-primary p-8 sm:p-12 text-white shadow-2xl text-center relative overflow-hidden">
+        <div className="mt-20 rounded-3xl bg-linear-to-r from-primary via-primary-soft to-primary p-8 sm:p-12 text-white shadow-2xl text-center relative overflow-hidden">
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
             <h3 className="text-3xl font-extrabold sm:text-4xl">Ready to Upgrade Your Grocery Shopping?</h3>
             <p className="text-white/90 text-base sm:text-lg leading-relaxed">

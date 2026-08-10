@@ -120,7 +120,7 @@ export function HeroSection() {
 
           {/* Right Column: Natural Marketing Poster Showcase */}
           <div className="flex justify-center lg:col-span-5 perspective-1200">
-            <Reveal direction="none" delay={0.3} duration={0.8} className="relative w-full max-w-[320px] sm:max-w-[360px] xl:max-w-[400px]">
+            <Reveal direction="none" delay={0.3} duration={0.8} className="relative w-full max-w-[320px] sm:max-w-90 xl:max-w-100">
               <motion.div
                 ref={cardRef}
                 onMouseMove={handleMouseMove}
@@ -137,7 +137,7 @@ export function HeroSection() {
 
                 {/* Pre-rendered Card Poster */}
                 <div className="relative rounded-3xl border border-black/8 dark:border-white/12 bg-card p-2 shadow-soft-2xl transition-transform duration-300">
-                  <div className="relative aspect-[941/1672] w-full overflow-hidden rounded-2xl bg-surface">
+                  <div className="relative aspect-941/1672 w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
                       src="/images/empty-screen.png"
                       alt="Foddo Smart Grocery App - Never Forget Your Grocery List"

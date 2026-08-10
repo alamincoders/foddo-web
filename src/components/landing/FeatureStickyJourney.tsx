@@ -18,7 +18,7 @@ export function FeatureStickyJourney() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2]">
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-tight sm:leading-[1.2]">
               Shopping Reimagined for <br className="hidden sm:inline" />
               <span className="text-primary mt-1 inline-block">1-Handed Focus & Speed</span>
             </h2>
@@ -44,7 +44,7 @@ export function FeatureStickyJourney() {
               </Reveal>
 
               <Reveal direction="left" delay={0.1}>
-                <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2] text-balance">
+                <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-tight sm:leading-[1.2] text-balance">
                   Transform Supermarket Chaos into Satisfying Progress
                 </h3>
               </Reveal>
@@ -102,9 +102,9 @@ export function FeatureStickyJourney() {
 
             {/* Right Card Column: Order 1 on mobile (Image First), Order 2 on desktop */}
             <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
-              <Reveal direction="right" delay={0.2} className="relative w-full max-w-[320px] sm:max-w-[380px] xl:max-w-[400px]">
+              <Reveal direction="right" delay={0.2} className="relative w-full max-w-[320px] sm:max-w-95 xl:max-w-100">
                 <div className="group relative rounded-3xl border border-black/8 dark:border-white/12 bg-card p-2.5 shadow-soft-2xl transition-all duration-300 hover:shadow-2xl">
-                  <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
+                  <div className="relative aspect-1024/1536 w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
                       src="/images/bazar-mode.png"
                       alt="Foddo Bazar Mode - Shop Smart with Live Progress and Quick Add"
@@ -124,9 +124,9 @@ export function FeatureStickyJourney() {
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
             {/* Card Column: Order 1 on mobile (Image First), Order 1 on desktop */}
             <div className="order-1 lg:col-span-5 flex justify-center">
-              <Reveal direction="left" delay={0.2} className="relative w-full max-w-[320px] sm:max-w-[380px] xl:max-w-[400px]">
+              <Reveal direction="left" delay={0.2} className="relative w-full max-w-[320px] sm:max-w-95 xl:max-w-100">
                 <div className="group relative rounded-3xl border border-black/8 dark:border-white/12 bg-card p-2.5 shadow-soft-2xl transition-all duration-300 hover:shadow-2xl">
-                  <div className="relative aspect-[1024/1536] w-full overflow-hidden rounded-2xl bg-surface">
+                  <div className="relative aspect-1024/1536 w-full overflow-hidden rounded-2xl bg-surface">
                     <Image
                       src="/images/lists.png"
                       alt="Foddo - All Your Lists Always Organized with Clean Simplicity"
@@ -149,7 +149,7 @@ export function FeatureStickyJourney() {
               </Reveal>
 
               <Reveal direction="right" delay={0.1}>
-                <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-[1.25] sm:leading-[1.2] text-balance">
+                <h3 className="text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl leading-tight sm:leading-[1.2] text-balance">
                   All Your Lists, Always Organized
                 </h3>
               </Reveal>

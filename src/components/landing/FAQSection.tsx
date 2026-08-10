@@ -29,7 +29,7 @@ export function FAQSection() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.2] text-balance">
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-tight sm:leading-[1.2] text-balance">
               Got Questions? <br className="hidden sm:inline" />
               <span className="text-primary mt-1 inline-block">We&apos;ve Got Answers.</span>
             </h2>
