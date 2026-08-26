@@ -1,4 +1,6 @@
-import { ArrowDownToLine, HardDrive, Lock, ShieldCheck, UserX } from "lucide-react";
+import { HardDrive, Lock, ShieldCheck, UserX } from "lucide-react";
+import { GooglePlayIcon } from "@/components/ui/GooglePlayIcon";
+import { PLAY_STORE_URL } from "@/lib/constants";
 
 export function PrivacySection() {
   return (
@@ -71,12 +73,12 @@ export function PrivacySection() {
             </p>
             <div className="pt-4 flex justify-center">
               <a
-                href="https://play.google.com/store"
+                href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-2xl bg-white px-8 py-4 text-base font-extrabold text-primary shadow-xl hover:bg-slate-50 transition-all hover:scale-105 active:scale-100"
+                className="inline-flex items-center gap-3 rounded-2xl bg-white px-8 py-4 text-base font-extrabold text-slate-950 shadow-xl hover:bg-slate-50 transition-all hover:scale-105 active:scale-100"
               >
-                <ArrowDownToLine className="h-5 w-5 text-primary" />
+                <GooglePlayIcon className="h-6 w-6 shrink-0" />
                 <span>Get Foddo on Google Play</span>
               </a>
             </div>

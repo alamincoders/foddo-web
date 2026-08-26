@@ -1,8 +1,10 @@
 "use client";
 
-import { ArrowDownToLine, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 import Image from "next/image";
 import { Reveal } from "./motion/Reveal";
+import { GooglePlayIcon } from "@/components/ui/GooglePlayIcon";
+import { PLAY_STORE_URL } from "@/lib/constants";
 
 export function FinalCTASection() {
   return (
@@ -38,12 +40,12 @@ export function FinalCTASection() {
               {/* Download Action Buttons */}
               <Reveal direction="up" delay={0.3} className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <a
-                  href="https://play.google.com/store"
+                  href={PLAY_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-2xl bg-primary px-6 py-3.5 text-sm xl:px-8 xl:py-4 xl:text-base font-bold text-white shadow-xl shadow-primary/30 transition-all duration-200 hover:bg-primary/95 hover:shadow-2xl hover:shadow-primary/40 hover:-translate-y-0.5 active:translate-y-0"
+                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-2xl bg-foreground px-6 py-3.5 text-sm xl:px-8 xl:py-4 xl:text-base font-bold text-background shadow-xl transition-all duration-200 hover:bg-foreground/90 hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 dark:bg-card dark:text-foreground dark:border dark:border-border dark:hover:border-primary/40"
                 >
-                  <ArrowDownToLine className="h-4 w-4 xl:h-5 xl:w-5 transition-transform group-hover:translate-y-0.5" />
+                  <GooglePlayIcon className="h-5 w-5 shrink-0 transition-transform group-hover:scale-110" />
                   <span>Get Foddo on Google Play</span>
                 </a>
 

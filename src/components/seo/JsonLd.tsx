@@ -1,3 +1,5 @@
+import { PLAY_STORE_URL } from "@/lib/constants";
+
 export const FAQ_DATA = [
   {
     question: "What makes Foddo different from other grocery list apps?",
@@ -52,7 +54,7 @@ export function JsonLd() {
       name: "iTechills",
       url: "https://itechills.com",
     },
-    downloadUrl: "https://play.google.com/store",
+    downloadUrl: PLAY_STORE_URL,
     featureList: [
       "Sub-3-Second Time To First Value",
       "Multilingual Smart Input Parser (English & বাংলা)",
