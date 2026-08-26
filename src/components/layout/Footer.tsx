@@ -126,11 +126,11 @@ export function Footer() {
             </h3>
             <div className="mt-4 space-y-3.5 text-sm">
               <a
-                href="mailto:hello@itechills.com"
+                href="mailto:support@itechills.com"
                 className="group inline-flex items-center gap-2 rounded-xl border border-border/80 bg-card px-3.5 py-2.5 text-xs font-bold text-foreground shadow-xs transition-all hover:border-primary/40 hover:text-primary hover:shadow-sm"
               >
                 <Mail className="h-4 w-4 text-primary" />
-                <span>hello@itechills.com</span>
+                <span>support@itechills.com</span>
               </a>
 
               <p className="text-xs text-muted-foreground leading-relaxed">

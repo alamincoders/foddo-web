@@ -238,7 +238,7 @@ Foddo is designed, built, and maintained by **[iTechills](https://itechills.com)
 
 - **Website**: [https://itechills.com](https://itechills.com)
 - **Product Portal**: [https://foddo.itechills.com](https://foddo.itechills.com)
-- **Support & Inquiries**: [hello@itechills.com](mailto:hello@itechills.com)
+- **Support & Inquiries**: [support@itechills.com](mailto:support@itechills.com)
 
 ---
 

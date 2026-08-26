@@ -129,11 +129,11 @@ export default function TermsPage() {
           <div className="mt-4 flex items-center gap-3">
             <span className="text-sm text-muted-foreground">For legal inquiries or support:</span>
             <a
-              href="mailto:hello@itechills.com"
+              href="mailto:support@itechills.com"
               className="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-card"
             >
               <Mail className="h-4 w-4" />
-              <span>hello@itechills.com</span>
+              <span>support@itechills.com</span>
             </a>
           </div>
         </section>

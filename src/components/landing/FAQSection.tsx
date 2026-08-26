@@ -97,11 +97,11 @@ export function FAQSection() {
               <p className="text-xs sm:text-sm text-muted-foreground mt-1">Our support engineering team is here to help you get the most out of Foddo.</p>
             </div>
             <a
-              href="mailto:hello@itechills.com"
+              href="mailto:support@itechills.com"
               className="mt-4 sm:mt-0 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-white shadow-sm transition-transform hover:scale-105"
             >
               <Mail className="h-4 w-4" />
-              <span>hello@itechills.com</span>
+              <span>support@itechills.com</span>
             </a>
           </div>
         </Reveal>

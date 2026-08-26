@@ -144,8 +144,8 @@ export default function PrivacyPage() {
           </p>
           <div className="mt-2 inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-4 py-2.5 text-sm font-semibold text-foreground">
             <Mail className="h-4 w-4 text-primary" />
-            <a href="mailto:hello@itechills.com" className="hover:text-primary transition-colors">
-              hello@itechills.com
+            <a href="mailto:support@itechills.com" className="hover:text-primary transition-colors">
+              support@itechills.com
             </a>
           </div>
         </section>

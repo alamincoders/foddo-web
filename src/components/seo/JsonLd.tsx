@@ -77,7 +77,7 @@ export function JsonLd() {
     logo: `${baseUrl}/icon.png`,
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@itechills.com",
+      email: "support@itechills.com",
       contactType: "customer support",
       availableLanguage: ["English", "Bengali"],
     },
