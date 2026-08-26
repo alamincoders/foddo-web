@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, Sparkles, Zap, ShoppingBag, ShieldCheck, HelpCircle } from "lucide-react";
@@ -9,6 +9,43 @@ import { PLAY_STORE_URL } from "@/lib/constants";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const lastScrollYRef = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const lastScrollY = lastScrollYRef.current;
+
+      // When near the top, always show navbar and remove extra shadow
+      if (currentScrollY <= 20) {
+        setIsVisible(true);
+        setIsScrolled(false);
+        lastScrollYRef.current = currentScrollY;
+        return;
+      }
+
+      setIsScrolled(true);
+
+      // Add small buffer to avoid jitter
+      const diff = currentScrollY - lastScrollY;
+      if (Math.abs(diff) < 8) return;
+
+      if (currentScrollY > lastScrollY && !mobileMenuOpen) {
+        // Scrolling DOWN -> Hide navbar
+        setIsVisible(false);
+      } else {
+        // Scrolling UP -> Show navbar
+        setIsVisible(true);
+      }
+
+      lastScrollYRef.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { name: "Features", href: "#features", icon: Sparkles },
@@ -19,7 +56,15 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md transition-all">
+    <header
+      className={`sticky top-0 z-50 w-full transition-transform duration-300 ease-in-out ${
+        isVisible || mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+      } ${
+        isScrolled
+          ? "border-b border-border/80 bg-background/85 backdrop-blur-md shadow-sm"
+          : "border-b border-border/50 bg-background/80 backdrop-blur-md"
+      }`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Brand Logo */}
         <Link
