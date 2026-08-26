@@ -11,41 +11,38 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
-  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const lastScrollY = lastScrollYRef.current;
 
-      // When near the top, always show navbar and remove extra shadow
-      if (currentScrollY <= 20) {
+      // When near the top, always show navbar
+      if (currentScrollY <= 15) {
         setIsVisible(true);
         setIsScrolled(false);
-        lastScrollYRef.current = currentScrollY;
+        lastScrollY = currentScrollY;
         return;
       }
 
       setIsScrolled(true);
 
-      // Add small buffer to avoid jitter
-      const diff = currentScrollY - lastScrollY;
-      if (Math.abs(diff) < 8) return;
-
-      if (currentScrollY > lastScrollY && !mobileMenuOpen) {
-        // Scrolling DOWN -> Hide navbar
+      // Scrolling Down -> Hide
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
         setIsVisible(false);
-      } else {
-        // Scrolling UP -> Show navbar
+      } 
+      // Scrolling Up -> Show
+      else if (currentScrollY < lastScrollY) {
         setIsVisible(true);
       }
 
-      lastScrollYRef.current = currentScrollY;
+      lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [mobileMenuOpen]);
+  }, []);
 
   const navLinks = [
     { name: "Features", href: "#features", icon: Sparkles },
@@ -56,15 +53,16 @@ export function Navbar() {
   ];
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-transform duration-300 ease-in-out ${
-        isVisible || mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-      } ${
-        isScrolled
-          ? "border-b border-border/80 bg-background/85 backdrop-blur-md shadow-sm"
-          : "border-b border-border/50 bg-background/80 backdrop-blur-md"
-      }`}
-    >
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out ${
+          isVisible || mobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+        } ${
+          isScrolled
+            ? "border-b border-border/80 bg-background/90 backdrop-blur-md shadow-sm"
+            : "border-b border-border/50 bg-background/80 backdrop-blur-md"
+        }`}
+      >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Brand Logo */}
         <Link
@@ -169,5 +167,8 @@ export function Navbar() {
         </div>
       )}
     </header>
+    {/* Spacer so the page content isn't under the fixed navbar */}
+    <div className="h-16 w-full shrink-0" aria-hidden="true" />
+  </>
   );
 }
