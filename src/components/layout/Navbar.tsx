@@ -65,7 +65,7 @@ export function Navbar() {
             href={PLAY_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-xs font-semibold text-white shadow-sm shadow-slate-900/20 transition-all duration-200 hover:bg-slate-800 hover:text-white hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+            className="group inline-flex items-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-primary/25 transition-all duration-200 hover:bg-primary/90 hover:text-white hover:shadow-lg hover:shadow-primary/35 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           >
             <GooglePlayIcon className="h-4 w-4 shrink-0 transition-transform group-hover:scale-110" />
             <span>Get on Google Play</span>
@@ -114,7 +114,7 @@ export function Navbar() {
                 href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full items-center justify-center gap-2.5 rounded-xl bg-slate-900 px-4 py-3 text-center text-sm font-semibold text-white shadow-md transition-colors hover:bg-slate-800 hover:text-white active:scale-[0.98]"
+                className="flex w-full items-center justify-center gap-2.5 rounded-xl bg-primary px-4 py-3 text-center text-sm font-bold text-white shadow-md shadow-primary/20 transition-all hover:bg-primary/90 hover:text-white active:scale-[0.98]"
               >
                 <GooglePlayIcon className="h-4 w-4 shrink-0" />
                 <span>Get on Google Play</span>
