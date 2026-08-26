@@ -19,7 +19,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://foddo.itechills.com"),
-  title: "Foddo — The Smart, Local-First Grocery & Shopping List App | Sub-3s Speed",
+  title: "Foddo - The Smart, Local-First Grocery & Shopping List App | Sub-3s Speed",
   description:
     "Foddo is the smart, privacy-first grocery shopping list app. Designed for sub-3-second speed, 100% on-device offline storage, Bazar Mode goal gradient tracking, and real-time family sync with zero sign-in walls.",
   applicationName: "Foddo",
