@@ -43,7 +43,7 @@ export function FinalCTASection() {
                   href={PLAY_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-2xl bg-foreground px-6 py-3.5 text-sm xl:px-8 xl:py-4 xl:text-base font-bold text-background shadow-xl transition-all duration-200 hover:bg-foreground/90 hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 dark:bg-card dark:text-foreground dark:border dark:border-border dark:hover:border-primary/40"
+                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-2xl bg-slate-900 px-6 py-3.5 text-sm xl:px-8 xl:py-4 xl:text-base font-bold text-white shadow-xl shadow-slate-900/25 transition-all duration-200 hover:bg-slate-800 hover:text-white hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 >
                   <GooglePlayIcon className="h-5 w-5 shrink-0 transition-transform group-hover:scale-110" />
                   <span>Get Foddo on Google Play</span>

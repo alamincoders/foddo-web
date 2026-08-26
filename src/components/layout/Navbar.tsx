@@ -65,7 +65,7 @@ export function Navbar() {
             href={PLAY_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-xl bg-foreground px-4 py-2.5 text-xs font-semibold text-background shadow-md transition-all hover:bg-foreground/90 hover:shadow-lg active:scale-[0.98] dark:bg-card dark:text-foreground dark:border dark:border-border dark:hover:border-primary/40"
+            className="group inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-xs font-semibold text-white shadow-sm shadow-slate-900/20 transition-all duration-200 hover:bg-slate-800 hover:text-white hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           >
             <GooglePlayIcon className="h-4 w-4 shrink-0 transition-transform group-hover:scale-110" />
             <span>Get on Google Play</span>
@@ -114,7 +114,7 @@ export function Navbar() {
                 href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full items-center justify-center gap-2.5 rounded-xl bg-foreground px-4 py-3 text-center text-sm font-semibold text-background shadow-md dark:bg-card dark:text-foreground dark:border dark:border-border"
+                className="flex w-full items-center justify-center gap-2.5 rounded-xl bg-slate-900 px-4 py-3 text-center text-sm font-semibold text-white shadow-md transition-colors hover:bg-slate-800 hover:text-white active:scale-[0.98]"
               >
                 <GooglePlayIcon className="h-4 w-4 shrink-0" />
                 <span>Get on Google Play</span>
