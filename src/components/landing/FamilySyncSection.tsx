@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle2, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { CheckCircle2, KeyRound, ShieldCheck, ShoppingCart, Sparkles, Users } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
@@ -9,37 +9,40 @@ import { Reveal } from "./motion/Reveal";
 const TABS = [
   {
     id: "sync",
-    label: "👨‍👩‍👧 Real-Time Sync",
+    label: "Real-Time Sync",
+    icon: Users,
     tagline: "One List. Everyone Stays in Sync.",
-    description: "Whether you're at home or in the market, every change is shared instantly across your entire household. Add, edit, or check off items with live member avatars.",
+    description: "Whether you're at home or in the market, every change is shared instantly across your entire family. Add, edit, or check off items with personalized member nicknames and live avatars.",
     image: "/images/family-explaination.png",
     alt: "Foddo Family Sync - One List Everyone Stays In Sync",
     bullets: [
-      "Real-time instant item checks with member avatars (Mom, Dad, Sister)",
+      "Real-time instant item checks with personalized member nicknames (Mom, Dad, Sister, Me)",
       "100% offline-resilient sync: updates propagate automatically when connected",
-      "Private and encrypted data sharing exclusively within your household",
+      "Private and encrypted data sharing exclusively within your family",
     ],
   },
   {
     id: "live",
-    label: "🛒 Live In Market",
+    label: "Live In Market",
+    icon: ShoppingCart,
     tagline: "Shop Together, From Anywhere",
     description: "Dad is at the market checking off tomatoes while Mom adds milk from home. Experience zero duplicate purchases and zero forgotten items.",
     image: "/images/family-bazar.png",
     alt: "Foddo Live Family Bazar - Shop Together From Anywhere",
     bullets: [
-      "Live status indicators: 'Dad At Market' and 'Sister At Home'",
+      "Live status indicators: 'Dad At Market' and 'Mom At Home'",
       "Instant push notifications when urgent groceries are added",
-      "Eliminates frantic phone calls and forgotten grocery WhatsApp messages",
+      "Eliminates frantic phone calls and forgotten grocery messages",
     ],
   },
   {
     id: "invite",
-    label: "🔑 6-Digit Join Code",
+    label: "6-Digit Join Code",
+    icon: KeyRound,
     tagline: "Invite Anyone with a Simple Code",
-    description: "No tedious email invites or complicated account configurations. Generate a simple 6-character household code and share it with family in seconds.",
+    description: "No tedious email invites or complicated account configurations. Generate a simple 6-character family code and share it with family in seconds.",
     image: "/images/family-joining-process.png",
-    alt: "Foddo Household Invite Code Process",
+    alt: "Foddo Family Invite Code Process",
     bullets: [
       "Simple 1-2-3 join flow: Create → Share Code → Start Shopping Together",
       "Private & protected: Only authorized members with code can access lists",
@@ -59,13 +62,13 @@ export function FamilySyncSection() {
           <Reveal direction="down">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-muted px-4 py-1.5 text-xs font-bold text-primary shadow-xs mb-4">
               <Users className="h-3.5 w-3.5 fill-primary text-primary" />
-              <span>Seamless Household Collaboration</span>
+              <span>Seamless Family Collaboration</span>
             </div>
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
             <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl leading-tight sm:leading-[1.2]">
-              One Household Grocery List. <br className="hidden sm:inline" />
+              One Shared Family Grocery List. <br className="hidden sm:inline" />
               <span className="text-primary mt-1 inline-block">Always in Sync.</span>
             </h2>
           </Reveal>
@@ -85,7 +88,7 @@ export function FamilySyncSection() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab)}
-                    className={`relative rounded-xl px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer ${
+                    className={`relative flex items-center gap-2 rounded-xl px-3.5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer ${
                       isActive ? "text-primary font-extrabold" : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
@@ -96,6 +99,7 @@ export function FamilySyncSection() {
                         transition={{ type: "spring", stiffness: 350, damping: 30 }}
                       />
                     )}
+                    <tab.icon className="relative z-10 h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                     <span className="relative z-10">{tab.label}</span>
                   </button>
                 );
@@ -119,7 +123,7 @@ export function FamilySyncSection() {
                   className="space-y-5 sm:space-y-6"
                 >
                   <div className="inline-flex items-center gap-2 rounded-xl bg-primary-muted px-3.5 py-1.5 text-xs font-bold text-primary">
-                    <Sparkles className="h-4 w-4" />
+                    <activeTab.icon className="h-4 w-4" />
                     <span>{activeTab.label}</span>
                   </div>
 
@@ -140,7 +144,7 @@ export function FamilySyncSection() {
 
                   <div className="pt-2 sm:pt-4 flex items-center gap-2 text-xs font-semibold text-primary">
                     <ShieldCheck className="h-4 w-4 shrink-0" />
-                    <span>Private household encryption • Zero third-party tracking</span>
+                    <span>Private family encryption • Zero third-party tracking</span>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -148,7 +152,7 @@ export function FamilySyncSection() {
 
             {/* Poster Column: Order 1 on Mobile (Image First), Order 2 on Desktop */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center order-1 lg:order-2">
-              {/* Mobile Quick Household Context Badge */}
+              {/* Mobile Quick Family Context Badge */}
               <div className="flex sm:hidden items-center justify-center gap-2 py-1.5 px-3 rounded-full bg-surface border border-border/70 text-[11px] font-semibold text-foreground mb-4">
                 <span className="text-primary font-bold">🛒 Dad (At Market)</span>
                 <span className="text-muted-foreground">↔</span>

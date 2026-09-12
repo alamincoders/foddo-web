@@ -71,13 +71,13 @@ export function FeatureGrid() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-xl bg-primary-muted px-3 py-1.5 text-xs font-bold text-primary mb-4">
                 <Users className="h-4 w-4" />
-                <span>Family & Household Sync</span>
+                <span>Real-Time Family Sync</span>
               </div>
               <h3 className="text-2xl font-bold text-foreground">
                 Seamless Family Grocery Lists
               </h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                Share grocery lists with family members without sacrificing data control. Collaborate in real-time on shared trips and household restocking.
+                Share grocery lists with family members without sacrificing data control. Collaborate in real-time on shared trips and family restocking.
               </p>
             </div>
 

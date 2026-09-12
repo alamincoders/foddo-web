@@ -61,7 +61,7 @@ export function EcosystemShowcase() {
 
           <Reveal direction="up" delay={0.2}>
             <p className="mt-5 text-base text-muted-foreground sm:text-lg leading-relaxed">
-              Designed from the ground up to replace clunky spreadsheets and slow cloud apps. Seamlessly manage grocery lists, in-store shopping trips, reminders, and household collaboration.
+              Designed from the ground up to replace clunky spreadsheets and slow cloud apps. Seamlessly manage grocery lists, in-store shopping trips, reminders, and family collaboration.
             </p>
           </Reveal>
         </div>

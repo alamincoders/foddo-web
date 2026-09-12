@@ -49,7 +49,7 @@ export function PrivacySection() {
             </div>
             <h3 className="text-lg font-bold text-foreground">Contextual Demographics</h3>
             <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-              Demographic inputs (gender/age) are entirely optional and contextual—used strictly for tailored household product suggestions, never as a gate.
+              Demographic inputs (gender/age) are entirely optional and contextual—used strictly for tailored family product suggestions, never as a gate.
             </p>
           </div>
 

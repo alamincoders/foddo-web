@@ -19,7 +19,7 @@ export const FAQ_DATA = [
   {
     question: "How does Family Sync work without a mandatory account?",
     answer:
-      "You can link household grocery lists with family members using a simple 6-digit sync code. Once connected, items synchronize in real time without requiring email or password registrations.",
+      "You can link shared grocery lists with family members using a simple 6-digit sync code. Once connected, items synchronize in real time without requiring email or password registrations.",
   },
   {
     question: "How does the Multilingual Smart Input feature work?",
@@ -60,14 +60,14 @@ export function JsonLd() {
       "Multilingual Smart Input Parser (English & বাংলা)",
       "100% Local On-Device Storage",
       "Bazar Mode In-Store Goal Gradient",
-      "Real-Time Household Family Sync",
+      "Real-Time Family Sync",
       "100% Offline Mode Operation",
       "Bangla and English Bilingual Support",
     ],
     screenshot: `${baseUrl}/images/overview.png`,
     image: `${baseUrl}/icon.png`,
     description:
-      "Local-first smart grocery list app built for sub-3-second utility, privacy, offline shopping trips, and seamless household collaboration.",
+      "Local-first smart grocery list app built for sub-3-second utility, privacy, offline shopping trips, and seamless family collaboration.",
   };
 
   // 2. Organization Schema

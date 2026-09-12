@@ -33,7 +33,7 @@ export function FinalCTASection() {
 
               <Reveal direction="up" delay={0.2}>
                 <p className="mt-5 text-base sm:text-lg lg:text-base xl:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Experience sub-3-second list creation, Bazar Mode focus, and effortless household collaboration today. Free forever with zero annoying ads.
+                  Experience sub-3-second list creation, Bazar Mode focus, and effortless family collaboration today. Free forever with zero annoying ads.
                 </p>
               </Reveal>
 

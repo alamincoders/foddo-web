@@ -83,7 +83,7 @@ export default function PrivacyPage() {
             3. Optional Demographic Data Policy
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            To provide optional smart household recommendations, Foddo may give you the option to input demographic preferences such as household size or age bracket.
+            To provide optional smart family recommendations, Foddo may give you the option to input demographic preferences such as household size or age bracket.
           </p>
           <div className="rounded-xl border border-primary/20 bg-primary-muted p-4 text-xs text-primary space-y-1">
             <span className="font-bold block">Strict Consent & Contextual Standard:</span>

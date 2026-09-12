@@ -116,7 +116,7 @@ export function LocalPrivacyBento() {
                 <Lock className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
               <h4 className="text-xs sm:text-sm xl:text-base font-bold text-foreground">Optional Demographics</h4>
-              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">Gender/age are 100% optional—used only for smart household tips.</p>
+              <p className="mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-relaxed">Gender/age are 100% optional—used only for smart family tips.</p>
             </div>
           </StaggerItem>
 

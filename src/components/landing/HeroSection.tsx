@@ -160,7 +160,7 @@ export function HeroSection() {
                   style={{ transform: "translateZ(30px)" }}
                 >
                   <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-accent-muted text-accent font-bold text-base sm:text-lg">
-                    ⚡
+                    <Zap className="h-4 w-4 sm:h-5 sm:w-5 fill-accent text-accent" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-foreground">Instant Add</div>

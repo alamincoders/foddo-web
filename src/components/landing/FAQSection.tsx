@@ -37,7 +37,7 @@ export function FAQSection() {
 
           <Reveal direction="up" delay={0.2}>
             <p className="mt-5 text-base text-muted-foreground sm:text-lg leading-relaxed">
-              Everything you need to know about Foddo&apos;s local-first architecture, privacy guarantees, speed, and household family sync.
+              Everything you need to know about Foddo&apos;s local-first architecture, privacy guarantees, speed, and real-time family sync.
             </p>
           </Reveal>
         </div>
