@@ -1,37 +1,28 @@
 import type { MetadataRoute } from "next";
+import { BASE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://foddo.itechills.com";
-  const currentDate = new Date().toISOString();
-
+  const lastModified = new Date();
+  const scenes = ["empty", "list", "basket", "receipt", "restock", "history"];
+  const languages = { en: BASE_URL, bn: `${BASE_URL}/bn` };
   return [
     {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 1.0,
-      images: [
-        `${baseUrl}/images/overview.png`,
-        `${baseUrl}/images/empty-screen.png`,
-        `${baseUrl}/images/bazar-mode.png`,
-        `${baseUrl}/images/lists.png`,
-        `${baseUrl}/images/family-explaination.png`,
-        `${baseUrl}/images/settings.png`,
-        `${baseUrl}/images/smart-shopping-breakdown.png`,
-        `${baseUrl}/images/cta.png`,
-      ],
+      url: BASE_URL,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 1,
+      alternates: { languages },
+      images: [`${BASE_URL}/images/og.png`, ...scenes.map((s) => `${BASE_URL}/images/app/en/light-${s}.png`)],
     },
     {
-      url: `${baseUrl}/privacy`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.5,
+      url: `${BASE_URL}/bn`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+      alternates: { languages },
+      images: [`${BASE_URL}/images/og-bn.png`, ...scenes.map((s) => `${BASE_URL}/images/app/bn/light-${s}.png`)],
     },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
+    { url: `${BASE_URL}/privacy`, lastModified, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${BASE_URL}/terms`, lastModified, changeFrequency: "monthly", priority: 0.4 },
   ];
 }

@@ -1,170 +1,49 @@
-import { PLAY_STORE_URL } from "@/lib/constants";
+import { BASE_URL, COPY, PLAY_STORE_URL, type Lang } from "@/lib/site";
 
-export const FAQ_DATA = [
-  {
-    question: "What makes Foddo different from other grocery list apps?",
-    answer:
-      "Foddo is built around a local-first architecture with sub-3-second Time-To-First-Value (TTFV). There are zero forced sign-in screens, zero subscription paywalls, and zero network loading delays. Your shopping lists are stored 100% locally and privately on your phone.",
-  },
-  {
-    question: "Is Foddo completely free to use?",
-    answer:
-      "Yes, Foddo is 100% free to download and use. It contains zero intrusive ads, no subscription tiers, and no hidden paywalls.",
-  },
-  {
-    question: "Does Foddo work without an internet connection?",
-    answer:
-      "Absolutely. Because Foddo stores all data directly on your device, all features—including instant list creation, multilingual smart parsing, and Bazar Mode—work 100% offline, even inside basement supermarkets with zero signal.",
-  },
-  {
-    question: "How does Family Sync work without a mandatory account?",
-    answer:
-      "You can link shared grocery lists with family members using a simple 6-digit sync code. Once connected, items synchronize in real time without requiring email or password registrations.",
-  },
-  {
-    question: "How does the Multilingual Smart Input feature work?",
-    answer:
-      "Foddo features an on-device natural language parser that lets you type grocery items naturally in English, বাংলা, or Romanized Banglish (e.g., '2kg alu', 'দেড় লিটার দুধ'). It automatically extracts quantities, units, and item names into a clean, distraction-free list without extra dropdowns or clicks.",
-  },
-  {
-    question: "What is Bazar Mode?",
-    answer:
-      "Bazar Mode is an ergonomic in-store shopping view designed for 1-handed walking. It features 48px+ thumb-friendly touch targets, sunlight high-contrast readability, and live Goal Gradient progress tracking as you check off items.",
-  },
-];
+/** Structured data for search engines. Only things the app really does. */
+export function JsonLd({ lang }: { lang: Lang }) {
+  const copy = COPY[lang];
+  const url = lang === "bn" ? `${BASE_URL}/bn` : BASE_URL;
 
-export function JsonLd() {
-  const baseUrl = "https://foddo.itechills.com";
-
-  // 1. SoftwareApplication / MobileApplication Schema
-  const softwareApplicationSchema = {
+  const app = {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     name: "Foddo",
-    operatingSystem: "Android, iOS",
-    applicationCategory: "ShoppingApplication, ProductivityApplication",
-    offers: {
-      "@type": "Offer",
-      price: "0.00",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-    },
-    author: {
-      "@type": "Organization",
-      name: "iTechills",
-      url: "https://itechills.com",
-    },
+    operatingSystem: "Android",
+    applicationCategory: "ShoppingApplication",
+    inLanguage: ["en", "bn"],
+    offers: { "@type": "Offer", price: "0.00", priceCurrency: "USD", availability: "https://schema.org/InStock" },
+    author: { "@type": "Organization", name: "iTechills", url: "https://itechills.com" },
     downloadUrl: PLAY_STORE_URL,
-    featureList: [
-      "Sub-3-Second Time To First Value",
-      "Multilingual Smart Input Parser (English & বাংলা)",
-      "100% Local On-Device Storage",
-      "Bazar Mode In-Store Goal Gradient",
-      "Real-Time Family Sync",
-      "100% Offline Mode Operation",
-      "Bangla and English Bilingual Support",
-    ],
-    screenshot: `${baseUrl}/images/overview.png`,
-    image: `${baseUrl}/icon.png`,
-    description:
-      "Local-first smart grocery list app built for sub-3-second utility, privacy, offline shopping trips, and seamless family collaboration.",
+    featureList: COPY.en.features.items.map((f) => f.title),
+    screenshot: [`${BASE_URL}/images/app/en/light-list.png`, `${BASE_URL}/images/app/en/light-basket.png`, `${BASE_URL}/images/app/en/light-history.png`],
+    image: `${BASE_URL}/icon.png`,
+    description: copy.seo.description,
+    url,
   };
 
-  // 2. Organization Schema
-  const organizationSchema = {
+  const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "iTechills",
     url: "https://itechills.com",
-    logo: `${baseUrl}/icon.png`,
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: "support@itechills.com",
-      contactType: "customer support",
-      availableLanguage: ["English", "Bengali"],
-    },
+    logo: `${BASE_URL}/icon.png`,
+    contactPoint: { "@type": "ContactPoint", email: "support@itechills.com", contactType: "customer support", availableLanguage: ["English", "Bengali"] },
   };
 
-  // 3. WebSite Schema
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Foddo by iTechills",
-    url: baseUrl,
-  };
+  const website = { "@context": "https://schema.org", "@type": "WebSite", name: "Foddo by iTechills", url: BASE_URL, inLanguage: lang };
 
-  // 4. FAQPage Schema
-  const faqSchema = {
+  const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQ_DATA.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-
-  // 5. BreadcrumbList Schema
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: baseUrl,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Privacy Policy",
-        item: `${baseUrl}/privacy`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Terms of Service",
-        item: `${baseUrl}/terms`,
-      },
-    ],
+    mainEntity: copy.faq.items.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(softwareApplicationSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
-      />
+      {[app, organization, website, faq].map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
     </>
   );
 }

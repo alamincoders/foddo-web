@@ -3,8 +3,9 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Shield, Calendar, FileText } from "lucide-react";
-import { Navbar } from "../layout/Navbar";
-import { Footer } from "../layout/Footer";
+import { Header } from "../site/Header";
+import { Footer } from "../site/Footer";
+import { COPY } from "@/lib/site";
 
 export interface LegalSection {
   id: string;
@@ -28,7 +29,7 @@ export function LegalDocLayout({
 }: LegalDocLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col bg-background font-sans">
-      <Navbar />
+      <Header copy={COPY.en} />
 
       <main className="flex-1 py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -103,7 +104,7 @@ export function LegalDocLayout({
         </div>
       </main>
 
-      <Footer />
+      <Footer copy={COPY.en} />
     </div>
   );
 }

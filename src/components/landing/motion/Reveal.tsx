@@ -10,7 +10,7 @@ interface RevealProps extends HTMLMotionProps<"div"> {
   distance?: number;
   duration?: number;
   className?: string;
-  viewportMargin?: string;
+  viewportMargin?: `${number}px`;
 }
 
 export function Reveal({
@@ -49,7 +49,7 @@ export function Reveal({
         opacity: 1,
         scale: 1,
       }}
-      viewport={{ once: true, margin: viewportMargin as any }}
+      viewport={{ once: true, margin: viewportMargin }}
       transition={{
         duration,
         delay,

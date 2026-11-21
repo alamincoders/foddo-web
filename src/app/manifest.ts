@@ -2,14 +2,14 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Foddo | Local-First Smart Grocery & Shopping List",
+    name: "Foddo: Shopping List for Bangla & English",
     short_name: "Foddo",
     description:
-      "Instant 3-second grocery list manager with 100% on-device local storage, Bazar Mode goal tracking, and zero account gates.",
+      "A shopping list you can talk or type to, in Bangla and English. Works offline, no sign-in, no ads.",
     start_url: "/",
     display: "standalone",
-    background_color: "#FAFAF7",
-    theme_color: "#2F7D5C",
+    background_color: "#F4F7F1",
+    theme_color: "#17724A",
     icons: [
       {
         src: "/icon.png",

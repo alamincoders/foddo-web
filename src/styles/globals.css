@@ -2,63 +2,64 @@
 
 @theme {
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
-  --color-primary: #2F7D5C;
-  --color-primary-soft: #5A9C80;
-  --color-primary-muted: #E8F4EE;
-  --color-background: #FAFAF7;
-  --color-foreground: #1F2937;
+  --font-display: var(--font-baloo), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #17724A;
+  --color-primary-soft: #58AE82;
+  --color-primary-muted: #E0F1E7;
+  --color-background: #F4F7F1;
+  --color-foreground: #14241B;
   --color-card: #FFFFFF;
-  --color-card-foreground: #1F2937;
-  --color-surface: #F4F5F2;
-  --color-accent: #F59E0B;
-  --color-accent-soft: #FCD68A;
-  --color-accent-muted: #FFF7E6;
-  --color-muted: #F4F5F2;
-  --color-muted-foreground: #6B7280;
-  --color-border: #E5E7EB;
+  --color-card-foreground: #14241B;
+  --color-surface: #ECF1E8;
+  --color-accent: #F29B4B;
+  --color-accent-soft: #F9D2A8;
+  --color-accent-muted: #FCEBD8;
+  --color-muted: #E5ECE2;
+  --color-muted-foreground: #5F6F65;
+  --color-border: #E1E8DD;
 }
 
 :root {
-  --background: #FAFAF7;
-  --foreground: #1F2937;
+  --background: #F4F7F1;
+  --foreground: #14241B;
   --card: #FFFFFF;
-  --card-foreground: #1F2937;
+  --card-foreground: #14241B;
   --popover: #FFFFFF;
-  --popover-foreground: #1F2937;
-  --primary: #2F7D5C;
+  --popover-foreground: #14241B;
+  --primary: #17724A;
   --primary-foreground: #FFFFFF;
-  --secondary: #E8F4EE;
-  --secondary-foreground: #2F7D5C;
-  --muted: #F4F5F2;
-  --muted-foreground: #6B7280;
-  --accent: #F59E0B;
-  --accent-foreground: #FFFFFF;
-  --destructive: #EF4444;
-  --border: #E5E7EB;
-  --input: #E5E7EB;
-  --ring: #2F7D5C;
+  --secondary: #E0F1E7;
+  --secondary-foreground: #17724A;
+  --muted: #E5ECE2;
+  --muted-foreground: #5F6F65;
+  --accent: #F29B4B;
+  --accent-foreground: #2B1706;
+  --destructive: #D4473B;
+  --border: #E1E8DD;
+  --input: #E1E8DD;
+  --ring: #17724A;
   --radius: 0.75rem;
 }
 
 .dark {
-  --background: #111827;
-  --foreground: #F9FAFB;
-  --card: #1F2937;
-  --card-foreground: #F9FAFB;
-  --popover: #1F2937;
-  --popover-foreground: #F9FAFB;
-  --primary: #5A9C80;
-  --primary-foreground: #FFFFFF;
-  --secondary: #1E3A2F;
-  --secondary-foreground: #E8F4EE;
-  --muted: #374151;
-  --muted-foreground: #9CA3AF;
-  --accent: #F59E0B;
-  --accent-foreground: #FFFFFF;
-  --destructive: #F87171;
-  --border: #374151;
-  --input: #374151;
-  --ring: #5A9C80;
+  --background: #0D1511;
+  --foreground: #E6EFE8;
+  --card: #18241E;
+  --card-foreground: #E6EFE8;
+  --popover: #18241E;
+  --popover-foreground: #E6EFE8;
+  --primary: #4EC48C;
+  --primary-foreground: #04140B;
+  --secondary: #16342A;
+  --secondary-foreground: #E6EFE8;
+  --muted: #202D26;
+  --muted-foreground: #97AB9F;
+  --accent: #F4A55C;
+  --accent-foreground: #1B1005;
+  --destructive: #F27D70;
+  --border: #25332B;
+  --input: #25332B;
+  --ring: #4EC48C;
 }
 
 @layer base {
@@ -89,4 +90,66 @@
 
 @utility shadow-soft-2xl {
   box-shadow: 0 30px 60px -20px rgba(47, 125, 92, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.lang-bn body {
+  font-family: var(--font-noto-bn), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Lines a scrolling row up with the page container, then lets it bleed to the screen edge. */
+@utility gutter-x {
+  --gutter: calc((100vw - 1320px) / 2 + 2.5rem);
+  padding-inline: max(1.25rem, var(--gutter));
+  /* without this, scroll snapping pulls the first phone to the screen edge and hides the gutter */
+  scroll-padding-inline: max(1.25rem, var(--gutter));
+}
+
+/* Bangla headings use the same face as Bangla text, in a heavy weight. Baloo\x27s Bangla is too chunky at large sizes. */
+.lang-bn .font-display {
+  font-family: var(--font-noto-bn), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
 }
